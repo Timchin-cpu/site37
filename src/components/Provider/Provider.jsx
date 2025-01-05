@@ -6,7 +6,12 @@ import { useNavigate } from "react-router-dom";
 function Provider() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-
+  const handleRequestredemptionClick = () => {
+    navigate("/Requestredemption");
+  };
+  const handleRequestDisposalClick = () => {
+    navigate("/RequestDisposal");
+  };
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };
@@ -50,7 +55,7 @@ function Provider() {
             </div>
           </div>
           <div className={styles.buttonConatiner}>
-            <button>{t("propose")}</button>
+            <button onClick={handleRequestredemptionClick}>{t("propose")}</button>
           </div>
         </div>
         <div className={styles.mainContent}>
@@ -75,7 +80,7 @@ function Provider() {
             <img src="/utilisatsia2 1.png" alt="" />
           </div>
           <div className={styles.buttonConatiner}>
-            <button>{t("order")}</button>
+            <button onClick={handleRequestDisposalClick}>{t("order")}</button>
           </div>
         </div>
 
