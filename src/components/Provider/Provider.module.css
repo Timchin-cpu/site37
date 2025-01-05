@@ -19,6 +19,7 @@
   height: 100vh;
   font-family: Raleway;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .main {
   display: flex;
