@@ -4,8 +4,9 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 function Branding() {
-  let tg = window.Telegram.WebApp;
-  console.log(tg.initDataUnsafe);
+  const tg = window.Telegram.WebApp;
+  const tgUserId = tg.initDataUnsafe.user.id
+  console.log(tgUserId);
   const { t, i18n } = useTranslation();
 
   const [isOpen, setIsOpen] = useState(false);
