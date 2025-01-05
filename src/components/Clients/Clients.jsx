@@ -20,6 +20,9 @@ function Clients() {
   const handleRentClick = () => {
     navigate("/Rent");
   };
+  const handleEquipmentspareClick = () => {
+    navigate("/Equipmentspare");
+  };
   const { t, i18n } = useTranslation();
   return (
     <div className={styles.container}>
@@ -45,7 +48,7 @@ function Clients() {
         </div>
 
         <div className={styles.navContents}>
-          <div className={styles.equipment}>
+          <div className={styles.equipment}  onClick={handleEquipmentspareClick}>
             <p>{t("Equipment and spare parts")}</p>
             <img className={styles.texnImg} src="/texn.png" alt="" />
           </div>
