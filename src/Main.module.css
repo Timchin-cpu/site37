@@ -73,6 +73,7 @@
   max-width: 155px;
   width: 42vw;
   height: 30px;
+  color: black;
 }
 .gridContainer {
   display: grid; /* Включаем CSS Grid */
