@@ -17,7 +17,7 @@ function Branding() {
     // Запрос к серверу для получения данных пользователя
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/user/${tgUserId}`);
+        const response = await fetch(`/api/user/${tgUserId}`);
         const data = await response.json();
         console.log(data);
         
