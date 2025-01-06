@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 function Branding() {
+  const [message, setMessage] = useState("");
   const tg = window.Telegram.WebApp;
   const tgUserId = tg.initDataUnsafe.user.id;
   const [userData, setUserData] = useState({
@@ -58,10 +59,13 @@ function Branding() {
     setIsOpen(false);
   };
   const handleSubmit = () => {
-    if (!userData.name || !userData.phone || !userData.email) {
-      alert("Пожалуйста, заполните все поля");
+    if (!userData.name || !userData.phone || !userData.email || !message) {
+      alert("Пожалуйста, заполните все поля, включая сообщение");
       return;
     }
+
+    // Получаем русскую версию текста
+    const russianBrand = t("brand", { lng: "ru" });
 
     // Отправка данных на сервер
     fetch("/api/submit", {
@@ -73,6 +77,8 @@ function Branding() {
         ...userData,
         userId: tgUserId,
         type: selectedOption,
+        message: message,
+        brand: russianBrand, // Добавляем русскую версию текста
       }),
     })
       .then((response) => response.json())
@@ -221,7 +227,10 @@ function Branding() {
               )}
             </p>
           </div>
-          <textarea></textarea>
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
         </div>
         <div className={styles.attach}>
           <p>{t("Attach a file")}</p>
