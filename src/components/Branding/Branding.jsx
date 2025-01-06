@@ -156,17 +156,17 @@ function Branding() {
           )}
         </div>
         <div className={styles.input}>
-          <p>{t("Respectful Name")}</p>
-          <input type="text" />
-        </div>
-        <div className={styles.input}>
-          <p>{t("Telephone")}</p>
-          <input type="text" />
-        </div>
-        <div className={styles.input}>
-          <p>E-mail</p>
-          <input type="text" />
-        </div>
+      <p>{t("Respectful Name")}</p>
+      <input type="text" value={userData.name} />
+    </div>
+    <div className={styles.input}>  
+      <p>{t("Telephone")}</p>
+      <input type="text" value={userData.phone} />
+    </div>
+    <div className={styles.input}>
+      <p>E-mail</p> 
+      <input type="text" value={userData.email} />
+    </div>
         <div className={styles.inputMsg}>
           <div>
             <h2>{t("signal communication")}</h2>
