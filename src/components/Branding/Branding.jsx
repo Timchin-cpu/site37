@@ -6,7 +6,34 @@ import { useNavigate } from "react-router-dom";
 function Branding() {
   const tg = window.Telegram.WebApp;
   const tgUserId = tg.initDataUnsafe.user.id
-  console.log(tgUserId);
+  const [userData, setUserData] = useState({
+    name: '',
+    phone: '',
+    email: ''
+  });
+
+  useEffect(() => {
+    // Запрос к серверу для получения данных пользователя
+    const fetchUserData = async () => {
+      try {
+        const response = await fetch(`http://localhost:3001/api/user/${tgUserId}`);
+        const data = await response.json();
+        console.log(data);
+        
+        if (data) {
+          setUserData({
+            name: data.name || '',
+            phone: data.phone || '',
+            email: data.email || ''
+          });
+        }
+      } catch (error) {
+        console.error('Ошибка при получении данных:', error);
+      }
+    };
+
+    fetchUserData();
+  }, [tgUserId]);
   const { t, i18n } = useTranslation();
 
   const [isOpen, setIsOpen] = useState(false);
