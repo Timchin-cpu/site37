@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Equipmentspare.module.css";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function Equipmentspare() {
   const { t, i18n } = useTranslation();
+  const [message, setMessage] = useState("");
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(

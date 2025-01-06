@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Rent.module.css";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function Rent() {
   const { t, i18n } = useTranslation();
+  const [message, setMessage] = useState("");
 
   const navigate = useNavigate();
 

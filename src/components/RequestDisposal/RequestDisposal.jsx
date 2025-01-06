@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./RequestDisposal.module.css";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 const RequestDisposal = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [message, setMessage] = useState("");
 
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
