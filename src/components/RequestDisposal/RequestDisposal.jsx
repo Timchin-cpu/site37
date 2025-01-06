@@ -60,7 +60,7 @@ const RequestDisposal = () => {
       body: JSON.stringify({
         ...userData,
         userId: tgUserId,
-        type: selectedOption,
+        // type: selectedOption,
         message: message,
         brand: russianBrand, // Добавляем русскую версию текста
       }),
