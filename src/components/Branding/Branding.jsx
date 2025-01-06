@@ -12,7 +12,7 @@ function Branding() {
     phone: "",
     email: "",
   });
-  console.log(userData);
+  // console.log(userData);
 
   useEffect(() => {
     // Запрос к серверу для получения данных пользователя

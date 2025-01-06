@@ -26,6 +26,75 @@ function Ransom() {
     setSelectedOption(option.label);
     setIsOpen(false);
   };
+  const tg = window.Telegram.WebApp;
+  const tgUserId = tg.initDataUnsafe.user.id;
+  const [userData, setUserData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+  });
+  // console.log(userData);
+
+  useEffect(() => {
+    // Запрос к серверу для получения данных пользователя
+    const fetchUserData = async () => {
+      try {
+        const response = await fetch(`/api/user/${tgUserId}`);
+        const data = await response.json();
+        console.log(data);
+
+        if (data) {
+          setUserData({
+            name: data.name || "",
+            phone: data.phone || "",
+            email: data.email || "",
+          });
+        }
+      } catch (error) {
+        console.error("Ошибка при получении данных:", error);
+      }
+    };
+
+    fetchUserData();
+  }, [tgUserId]);
+  const handleSubmit = () => {
+    if (!userData.name || !userData.phone || !userData.email || !message) {
+      alert("Пожалуйста, заполните все поля, включая сообщение");
+      return;
+    }
+
+    // Получаем русскую версию текста
+    const russianBrand = t("brand", { lng: "ru" });
+
+    // Отправка данных на сервер
+    fetch("/api/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...userData,
+        userId: tgUserId,
+        type: selectedOption,
+        message: message,
+        brand: russianBrand, // Добавляем русскую версию текста
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        alert("Данные успешно отправлены");
+      })
+      .catch((error) => {
+        console.error("Ошибка при отправке:", error);
+        alert("Произошла ошибка при отправке");
+      });
+  };
+  const handleInputChange = (field, value) => {
+    setUserData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
   return (
     <div className={styles.container}>
       <div className={styles.logos}>
@@ -129,15 +198,27 @@ function Ransom() {
 
         <div className={styles.input}>
           <p>{t("Respectful Name")}</p>
-          <input type="text" />
+          <input
+            type="text"
+            value={userData.name}
+            onChange={(e) => handleInputChange("name", e.target.value)}
+          />
         </div>
         <div className={styles.input}>
           <p>{t("Telephone")}</p>
-          <input type="text" />
+          <input
+            type="text"
+            value={userData.phone}
+            onChange={(e) => handleInputChange("phone", e.target.value)}
+          />
         </div>
         <div className={styles.input}>
           <p>E-mail</p>
-          <input type="text" />
+          <input
+            type="text"
+            value={userData.email}
+            onChange={(e) => handleInputChange("email", e.target.value)}
+          />
         </div>
         <div className={styles.inputMsg}>
           <div>
@@ -148,7 +229,10 @@ function Ransom() {
               )}
             </p>
           </div>
-          <textarea></textarea>
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
         </div>
         <div className={styles.attach}>
           <p>{t("Attach a file")}</p>
@@ -159,7 +243,9 @@ function Ransom() {
           <p> {t("Agree to process personal data")}</p>
         </div>
         <div className={styles.send}>
-          {i18n.language !== "en" && <button>отправить</button>}
+          {i18n.language !== "en" && (
+            <button onClick={handleSubmit}>отправить</button>
+          )}
         </div>
         <p className={styles.textInfo}>
           {t(
