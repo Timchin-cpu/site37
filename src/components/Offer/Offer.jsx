@@ -25,13 +25,9 @@ const Offer = () => {
         </div>
       </div>
       <div className={styles.main}>
-        <p className={styles.offer}>
-          <b>Сделать предложение</b>{" "}
-        </p>
+        <p className={styles.offer}>Сделать предложение </p>
         <div className={styles.chooseAll}>
-          <p className={styles.offer}>
-            <b>Выбрать</b>
-          </p>
+          <p className={styles.offer}>Выбрать</p>
           <div className={styles.checkboxAll}>
             <p> все</p>
             <input type="checkbox" id="coding" name="interest" value="coding" />
