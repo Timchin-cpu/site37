@@ -56,7 +56,7 @@ const Offer = () => {
             </div>
           </div>
           <div className={styles.cardAbout}>
-            <div>
+            <div className={styles.pN}>
               <p>p/n:</p>
               <p>1234567890111</p>
               <img src="" alt="" />

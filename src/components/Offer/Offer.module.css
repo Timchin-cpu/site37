@@ -124,7 +124,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  width: 340px;
+  /* width: 340px; */
   height: 80px;
 
   border-radius: 11px;
@@ -143,6 +143,11 @@
   justify-content: space-between;
 }
 .cardAbout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pN {
   display: flex;
   align-items: center;
   justify-content: space-between;
