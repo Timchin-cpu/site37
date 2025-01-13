@@ -5,22 +5,45 @@ import { useNavigate } from "react-router-dom";
 const Offer = () => {
   const [selectedItems, setSelectedItems] = useState([]);
   const allItemsId = "all";
-  const itemId = "123"; // Уникальный id для каждого элемента
 
+  // Создаем массив с уникальными ID для каждой карточки
+  const cardItems = [
+    { id: "1", title: "Станины для Mei Advance с чипом..." },
+    { id: "2", title: "Станины для Mei Advance с чипом..." },
+  ];
+
+  const handleCheckboxChange = (id) => {
+    if (id === allItemsId) {
+      // Если нажат "выбрать все"
+      if (selectedItems.includes(allItemsId)) {
+        setSelectedItems([]); // Снимаем все выделения
+      } else {
+        setSelectedItems([allItemsId, ...cardItems.map((item) => item.id)]); // Выбираем все
+      }
+    } else {
+      setSelectedItems((prev) => {
+        if (prev.includes(id)) {
+          const newSelected = prev.filter(
+            (item) => item !== id && item !== allItemsId
+          );
+          return newSelected;
+        } else {
+          const newSelected = [...prev, id];
+          // Проверяем, выбраны ли все карточки
+          if (cardItems.every((item) => newSelected.includes(item.id))) {
+            return [...newSelected, allItemsId];
+          }
+          return newSelected;
+        }
+      });
+    }
+  };
   const navigate = useNavigate();
 
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };
-  const handleCheckboxChange = (id) => {
-    setSelectedItems((prev) => {
-      if (prev.includes(id)) {
-        return prev.filter((item) => item !== id);
-      } else {
-        return [...prev, id];
-      }
-    });
-  };
+
   return (
     <div className={styles.container}>
       {" "}
@@ -67,7 +90,30 @@ const Offer = () => {
             </div>
           </div>
         </div>
-        <div className={styles.card}>
+        {cardItems.map((item) => (
+          <div className={styles.card} key={item.id}>
+            <div className={styles.cardContent}>
+              <p>Станины для Mei Advance  с чипом….. </p>
+              <div className={styles.usedCount}>
+                <p>б/у</p>
+                <p>15</p>
+              </div>
+            </div>
+            <div className={styles.cardAbout}>
+              <div className={styles.pN}>
+                <p>p/n:</p>
+                <p>1234567890111</p>
+                <img src="/Group 9264.png" alt="" />
+              </div>
+              <input
+                type="checkbox"
+                onChange={() => handleCheckboxChange(item.id)}
+                checked={selectedItems.includes(item.id)}
+              />
+            </div>
+          </div>
+        ))}
+        {/* <div className={styles.card}>
           <div className={styles.cardContent}>
             <p>Станины для Mei Advance  с чипом….. </p>
             <div className={styles.usedCount}>
@@ -114,7 +160,7 @@ const Offer = () => {
               checked={selectedItems.includes(itemId)}
             />
           </div>
-        </div>
+        </div> */}
       </div>
       {selectedItems.length > 0 && (
         <button className={styles.submitButton}>Сделать предложение</button>
