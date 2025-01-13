@@ -47,7 +47,7 @@ const Offer = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.card}>
           <div>
             <p>Станины для Mei Advance  с чипом….. </p>
             <div>
