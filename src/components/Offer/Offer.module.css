@@ -153,6 +153,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 34%;
 }
 .usedCount {
   display: flex;
