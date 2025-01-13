@@ -136,6 +136,7 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  padding-top: 4px;
 }
 .cardContent {
   display: flex;
