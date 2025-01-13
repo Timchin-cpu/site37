@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   font-family: Raleway;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 .main {
   display: flex;
