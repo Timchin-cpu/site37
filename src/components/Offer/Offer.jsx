@@ -117,7 +117,7 @@ const Offer = () => {
         </div>
       </div>
       {selectedItems.length > 0 && (
-        <button className={styles.submitButton}>Отправить предложение</button>
+        <button className={styles.submitButton}>Сделать предложение</button>
       )}
     </div>
   );
