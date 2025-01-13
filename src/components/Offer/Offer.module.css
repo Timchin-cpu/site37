@@ -106,6 +106,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 43%;
 }
 .button {
   width: 72px;
