@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Offer.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -43,7 +43,7 @@ const Offer = () => {
             <p> все</p>
             <input
               type="checkbox"
-              id="coding"
+              // id="coding"
               name="interest"
               value="coding"
               onChange={() => handleCheckboxChange(id)}
@@ -81,7 +81,7 @@ const Offer = () => {
             </div>
             <input
               type="checkbox"
-              id="coding"
+              // id="coding"
               name="interest"
               value="coding"
               onChange={() => handleCheckboxChange(id)}
@@ -105,7 +105,7 @@ const Offer = () => {
             </div>
             <input
               type="checkbox"
-              id="coding"
+              // id="coding"
               name="interest"
               value="coding"
               onChange={() => handleCheckboxChange(id)}
