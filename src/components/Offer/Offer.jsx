@@ -28,7 +28,7 @@ const Offer = () => {
         <p className={styles.offer}>Сделать предложение </p>
         <div className={styles.chooseAll}>
           <p className={styles.offer}>Выбрать</p>
-          <div>
+          <div className={styles.checkboxAll}>
             <p> все</p>
             <input type="checkbox" id="coding" name="interest" value="coding" />
           </div>

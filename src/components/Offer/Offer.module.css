@@ -68,3 +68,8 @@
   align-items: center;
   justify-content: space-between;
 }
+.checkboxAll {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
