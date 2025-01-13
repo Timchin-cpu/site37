@@ -48,14 +48,14 @@ const Offer = () => {
           </div>
         </div>
         <div className={styles.card}>
-          <div>
+          <div className={styles.cardContent}>
             <p>Станины для Mei Advance  с чипом….. </p>
             <div>
               <p>б/у</p>
               <p>15</p>
             </div>
           </div>
-          <div>
+          <div className={styles.cardAbout}>
             <div>
               <p>p/n:</p>
               <p>1234567890111</p>

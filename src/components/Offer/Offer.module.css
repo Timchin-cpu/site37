@@ -128,4 +128,22 @@
   height: 80px;
 
   border-radius: 11px;
+  font-family: Arial;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: -0.05000000074505806px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cardAbout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
