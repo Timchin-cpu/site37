@@ -48,7 +48,7 @@ function Clients() {
         </div>
 
         <div className={styles.navContents}>
-          <div className={styles.equipment}  onClick={handleEquipmentspareClick}>
+          <div className={styles.equipment} onClick={handleEquipmentspareClick}>
             <p>{t("Equipment and spare parts")}</p>
             <img className={styles.texnImg} src="/texn.png" alt="" />
           </div>
@@ -69,7 +69,7 @@ function Clients() {
         </div>
         <h2 className={styles.brandNames}>{t("SUPPLIED BRANDS")}</h2>
         <div className={styles.carousel}>
-          <img className={styles.arrowImgar} src="/arrow.png" alt="" />
+          {/* <img className={styles.arrowImgar} src="/arrow.png" alt="" /> */}
           <div className={styles.carouselImgs}>
             <img className={styles.companyImg} src="/dn.png" alt="" />
             <img className={styles.companyImg} src="/ncr.png" alt="" />
