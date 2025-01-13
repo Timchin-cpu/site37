@@ -115,7 +115,14 @@ const Offer = () => {
         ))}
       </div>
       {selectedItems.length > 0 && (
-        <button className={styles.submitButton}>Сделать предложение</button>
+        <button
+          className={styles.submitButton}
+          onClick={() => {
+            navigate("/Requestoffer");
+          }}
+        >
+          Сделать предложение
+        </button>
       )}
     </div>
   );

@@ -14,6 +14,7 @@ import Equipmentspare from "./components/Equipmentspare/Equipmentspare.jsx";
 import Requestredemption from "./components/Requestredemption/Requestredemption.jsx";
 import RequestDisposal from "./components/RequestDisposal/RequestDisposal.jsx";
 import Offer from "./components/Offer/Offer.jsx";
+import Requestoffer from "./components/Requestoffer/Requestoffer.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { I18nextProvider } from "react-i18next";
@@ -35,6 +36,7 @@ root.render(
           <Route path="/Requestredemption" element={<Requestredemption />} />
           <Route path="/RequestDisposal" element={<RequestDisposal />} />
           <Route path="/Offer" element={<Offer />} />
+          <Route path="/Requestoffer" element={<Requestoffer />} />
         </Routes>
       </BrowserRouter>
     </I18nextProvider>
