@@ -50,7 +50,7 @@ const Offer = () => {
         <div className={styles.card}>
           <div className={styles.cardContent}>
             <p>Станины для Mei Advance  с чипом….. </p>
-            <div>
+            <div className={styles.usedCount}>
               <p>б/у</p>
               <p>15</p>
             </div>

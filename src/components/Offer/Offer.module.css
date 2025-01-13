@@ -141,13 +141,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 89%;
 }
 .cardAbout {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 89%;
 }
 .pN {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.usedCount {
   display: flex;
   align-items: center;
   justify-content: space-between;
