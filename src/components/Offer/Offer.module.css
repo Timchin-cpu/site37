@@ -193,3 +193,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+/* Добавьте в Offer.module.css */
+input[type="checkbox"]:checked {
+  accent-color: #3d6159;
+}
