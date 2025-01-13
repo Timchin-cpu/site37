@@ -26,7 +26,7 @@ const Offer = () => {
       </div>
       <div className={styles.main}>
         <p className={styles.offer}>Сделать предложение </p>
-        <div>
+        <div className={styles.chooseAll}>
           <p className={styles.offer}>Выбрать</p>
           <div>
             <p> все</p>
