@@ -34,10 +34,17 @@ const Offer = () => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <p>Наименование</p>
-          <div>
-            <p>состояние</p>
-            <p>кол-во</p>
+          <div className={styles.button}>
+            <p>Наименование</p>
+          </div>
+
+          <div className={styles.buttonsSm}>
+            <div className={styles.button}>
+              <p>состояние</p>
+            </div>
+            <div className={styles.button}>
+              <p>кол-во</p>
+            </div>
           </div>
         </div>
         <div>
