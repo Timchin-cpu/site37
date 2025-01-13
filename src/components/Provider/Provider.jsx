@@ -62,7 +62,13 @@ function Provider() {
         </div>
         <div className={styles.mainContent}>
           <p>{t("View Bansys' current purchase projects")}</p>
-          <img src="/forwardwh.png" alt="" onClick={navigate("/Offer")} />
+          <img
+            src="/forwardwh.png"
+            alt=""
+            onClick={() => {
+              navigate("/Offer");
+            }}
+          />
         </div>
         <div className={styles.mainContenSec}>
           <div className={styles.conten}>
