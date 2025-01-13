@@ -33,7 +33,7 @@ const Offer = () => {
             <input type="checkbox" id="coding" name="interest" value="coding" />
           </div>
         </div>
-        <div>
+        <div className={styles.buttons}>
           <p>Наименование</p>
           <div>
             <p>состояние</p>
