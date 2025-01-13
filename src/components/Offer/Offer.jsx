@@ -3,10 +3,21 @@ import styles from "./Offer.module.css";
 import { useNavigate } from "react-router-dom";
 
 const Offer = () => {
+  const [selectedItems, setSelectedItems] = useState([]);
+
   const navigate = useNavigate();
 
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
+  };
+  const handleCheckboxChange = (id) => {
+    setSelectedItems((prev) => {
+      if (prev.includes(id)) {
+        return prev.filter((item) => item !== id);
+      } else {
+        return [...prev, id];
+      }
+    });
   };
   return (
     <div className={styles.container}>
@@ -30,7 +41,14 @@ const Offer = () => {
           <p className={styles.offer}>Выбрать</p>
           <div className={styles.checkboxAll}>
             <p> все</p>
-            <input type="checkbox" id="coding" name="interest" value="coding" />
+            <input
+              type="checkbox"
+              id="coding"
+              name="interest"
+              value="coding"
+              onChange={() => handleCheckboxChange(id)}
+              checked={selectedItems.includes(id)}
+            />
           </div>
         </div>
         <div className={styles.buttons}>
@@ -61,7 +79,14 @@ const Offer = () => {
               <p>1234567890111</p>
               <img src="/Group 9264.png" alt="" />
             </div>
-            <input type="checkbox" id="coding" name="interest" value="coding" />
+            <input
+              type="checkbox"
+              id="coding"
+              name="interest"
+              value="coding"
+              onChange={() => handleCheckboxChange(id)}
+              checked={selectedItems.includes(id)}
+            />
           </div>
         </div>
         <div className={styles.card}>
@@ -78,10 +103,20 @@ const Offer = () => {
               <p>1234567890111</p>
               <img src="/Group 9264.png" alt="" />
             </div>
-            <input type="checkbox" id="coding" name="interest" value="coding" />
+            <input
+              type="checkbox"
+              id="coding"
+              name="interest"
+              value="coding"
+              onChange={() => handleCheckboxChange(id)}
+              checked={selectedItems.includes(id)}
+            />
           </div>
         </div>
       </div>
+      {selectedItems.length > 0 && (
+        <button className={styles.submitButton}>Отправить предложение</button>
+      )}
     </div>
   );
 };

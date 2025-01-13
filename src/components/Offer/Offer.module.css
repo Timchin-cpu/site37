@@ -172,3 +172,15 @@
 .cardAbout input {
   margin-right: 13px;
 }
+.submitButton {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #baa36e;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  z-index: 2;
+}
