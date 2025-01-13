@@ -6,6 +6,7 @@ const Offer = () => {
   const [selectedItems, setSelectedItems] = useState([]);
 
   const navigate = useNavigate();
+  const id = item.id; // или передать как параметр
 
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
@@ -43,7 +44,7 @@ const Offer = () => {
             <p> все</p>
             <input
               type="checkbox"
-              // id="coding"
+              id="coding"
               name="interest"
               value="coding"
               onChange={() => handleCheckboxChange(id)}
@@ -81,7 +82,7 @@ const Offer = () => {
             </div>
             <input
               type="checkbox"
-              // id="coding"
+              id="coding"
               name="interest"
               value="coding"
               onChange={() => handleCheckboxChange(id)}
@@ -105,7 +106,7 @@ const Offer = () => {
             </div>
             <input
               type="checkbox"
-              // id="coding"
+              id="coding"
               name="interest"
               value="coding"
               onChange={() => handleCheckboxChange(id)}
