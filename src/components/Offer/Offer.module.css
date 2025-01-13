@@ -113,6 +113,6 @@
   display: flex;
   align-items: center;
   border-radius: 4px;
-  border: 0.5px;
-  border-color: #17453b;
+  border: 1px solid #17453b;
+  justify-content: center;
 }
