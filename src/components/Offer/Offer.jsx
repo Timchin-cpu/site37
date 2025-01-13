@@ -59,7 +59,7 @@ const Offer = () => {
             <div className={styles.pN}>
               <p>p/n:</p>
               <p>1234567890111</p>
-              <img src="" alt="" />
+              <img src="/Group 9264.png" alt="" />
             </div>
             <input type="checkbox" id="coding" name="interest" value="coding" />
           </div>

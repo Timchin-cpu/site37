@@ -147,7 +147,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 89%;
+  width: 96%;
 }
 .pN {
   display: flex;
@@ -158,5 +158,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 46%;
+  width: 28%;
+  padding-right: 6%;
 }
