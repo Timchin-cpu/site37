@@ -160,11 +160,11 @@
   align-items: center;
   justify-content: space-between;
   width: 28%;
-  padding-right: 6%;
+  padding-right: 15px;
 }
 .pN img {
   width: 13px;
 }
 .pN input {
-  margin-right: 5.6%;
+  margin-right: 15px;
 }
