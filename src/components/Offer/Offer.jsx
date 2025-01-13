@@ -4,9 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 const Offer = () => {
   const [selectedItems, setSelectedItems] = useState([]);
+  const allItemsId = "all";
+  const itemId = "123"; // Уникальный id для каждого элемента
 
   const navigate = useNavigate();
-  const id = item.id; // или передать как параметр
 
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
@@ -47,8 +48,8 @@ const Offer = () => {
               id="coding"
               name="interest"
               value="coding"
-              onChange={() => handleCheckboxChange(id)}
-              checked={selectedItems.includes(id)}
+              onChange={() => handleCheckboxChange(allItemsId)}
+              checked={selectedItems.includes(allItemsId)}
             />
           </div>
         </div>
@@ -85,8 +86,8 @@ const Offer = () => {
               id="coding"
               name="interest"
               value="coding"
-              onChange={() => handleCheckboxChange(id)}
-              checked={selectedItems.includes(id)}
+              onChange={() => handleCheckboxChange(itemId)}
+              checked={selectedItems.includes(itemId)}
             />
           </div>
         </div>
@@ -109,8 +110,8 @@ const Offer = () => {
               id="coding"
               name="interest"
               value="coding"
-              onChange={() => handleCheckboxChange(id)}
-              checked={selectedItems.includes(id)}
+              onChange={() => handleCheckboxChange(itemId)}
+              checked={selectedItems.includes(itemId)}
             />
           </div>
         </div>
