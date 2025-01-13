@@ -64,6 +64,23 @@ const Offer = () => {
             <input type="checkbox" id="coding" name="interest" value="coding" />
           </div>
         </div>
+        <div className={styles.card}>
+          <div className={styles.cardContent}>
+            <p>Станины для Mei Advance  с чипом….. </p>
+            <div className={styles.usedCount}>
+              <p>б/у</p>
+              <p>15</p>
+            </div>
+          </div>
+          <div className={styles.cardAbout}>
+            <div className={styles.pN}>
+              <p>p/n:</p>
+              <p>1234567890111</p>
+              <img src="/Group 9264.png" alt="" />
+            </div>
+            <input type="checkbox" id="coding" name="interest" value="coding" />
+          </div>
+        </div>
       </div>
     </div>
   );
