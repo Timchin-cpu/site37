@@ -69,6 +69,8 @@
   align-items: center;
   justify-content: space-between;
   width: 91%;
+  padding-top: 2px;
+  padding-bottom: 15px;
 }
 .checkboxAll {
   display: flex;
