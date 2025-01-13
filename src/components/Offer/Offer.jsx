@@ -26,12 +26,35 @@ const Offer = () => {
       </div>
       <div className={styles.main}>
         <p>Сделать предложение </p>
-        <div></div>
+        <div>
+          <p>Выбрать</p>
+          <div>
+            <p> все</p>
+            <input type="checkbox" id="coding" name="interest" value="coding" />
+          </div>
+        </div>
         <div>
           <p>Наименование</p>
           <div>
             <p>состояние</p>
             <p>кол-во</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p>Станины для Mei Advance  с чипом….. </p>
+            <div>
+              <p>б/у</p>
+              <p>15</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>p/n:</p>
+              <p>1234567890111</p>
+              <img src="" alt="" />
+            </div>
+            <input type="checkbox" id="coding" name="interest" value="coding" />
           </div>
         </div>
       </div>
