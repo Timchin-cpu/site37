@@ -83,7 +83,13 @@ const Offer = () => {
         </div>
       </div>
       <div className={styles.main}>
-        <p className={styles.offer}>{t("propose")} </p>
+        <p
+          className={`${styles.offer} ${
+            i18n.language === "en" ? styles.offerEn : ""
+          }`}
+        >
+          {t("propose")}
+        </p>
         <div className={styles.chooseAll}>
           <p className={styles.offer}>{t("by")}</p>
           <div className={styles.checkboxAll}>
