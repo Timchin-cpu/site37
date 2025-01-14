@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Offer.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -6,11 +6,18 @@ const Offer = () => {
   const [selectedItems, setSelectedItems] = useState([]);
   const allItemsId = "all";
 
-  // Создаем массив с уникальными ID для каждой карточки
-  const cardItems = [
-    { id: "1", title: "Станины для Mei Advance с чипом..." },
-    { id: "2", title: "Станины для Mei Advance с чипом..." },
-  ];
+  const [cardItems, setCardItems] = useState([]); // Изменяем на состояние
+  useEffect(() => {
+    fetch("/api/products")
+      .then((response) => response.json())
+      .then((data) => {
+        setCardItems(data);
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Ошибка при загрузке товаров:", error);
+      });
+  }, []);
 
   const handleCheckboxChange = (id) => {
     if (id === allItemsId) {
