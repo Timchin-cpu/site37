@@ -24,6 +24,16 @@ function Clients() {
     navigate("/Equipmentspare");
   };
   const { t, i18n } = useTranslation();
+  const handleMailClick = () => {
+    const tg = window.Telegram.WebApp;
+    if (tg.platform === "tdesktop") {
+      // Для десктопной версии
+      tg.openLink("mailto:sale@bansys.ru");
+    } else {
+      // Для остальных платформ
+      window.open("mailto:sale@bansys.ru");
+    }
+  };
   return (
     <div className={styles.container}>
       <div className={styles.main}>
@@ -45,7 +55,7 @@ function Clients() {
               className={styles.supportImg}
               src="/mail.png"
               alt=""
-              onClick={() => window.open("mailto:sale@bansys.ru")}
+              onClick={handleMailClick}
             />
             <img
               className={styles.supportImg}
