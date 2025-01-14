@@ -103,7 +103,12 @@ function Clients() {
             <img className={styles.companyImg} src="/grg.png" alt="" />
             <img className={styles.companyImg} src="/wincor.png" alt="" />
           </div>
-          <img className={styles.arrowImgfor} src="/forwarf.png" alt="" />
+          <img
+            className={styles.arrowImgfor}
+            src="/forwarf.png"
+            alt=""
+            onClick={() => window.open("https://bansys.ru/company/brands/")}
+          />
         </div>
         <div className={styles.subscription}>
           <img className={styles.planeImg} src="/plane.png" alt="" />
