@@ -95,6 +95,16 @@ function Disposal() {
       [field]: value,
     }));
   };
+  const handleMailClick = () => {
+    const tg = window.Telegram.WebApp;
+    if (tg.platform === "tdesktop") {
+      // Для десктопной версии
+      tg.openLink("mailto:sale@bansys.ru");
+    } else {
+      // Для остальных платформ
+      window.open("mailto:sale@bansys.ru");
+    }
+  };
   return (
     <div className={styles.container}>
       <div className={styles.logos}>
@@ -139,9 +149,8 @@ function Disposal() {
               alt=""
               onClick={() => window.open("https://t.me/Bansys_chat")}
             />
-            <a href="mailto:sale@bansys.ru">
-              <img src="mail.png" alt="" />
-            </a>
+
+            <img src="mail.png" alt="" onClick={handleMailClick} />
           </div>
         </div>
       </div>
