@@ -25,13 +25,17 @@ function Clients() {
   };
   const { t, i18n } = useTranslation();
   const handleMailClick = () => {
-    const tg = window.Telegram.WebApp;
-    if (tg.platform === "tdesktop") {
-      // Для десктопной версии
-      tg.openLink("mailto:sale@bansys.ru");
-    } else {
-      // Для остальных платформ
-      window.open("mailto:sale@bansys.ru");
+    try {
+      const tg = window.Telegram.WebApp;
+      const mailtoUrl = "mailto:sale@bansys.ru";
+
+      if (tg.platform === "tdesktop") {
+        window.location.href = mailtoUrl;
+      } else {
+        window.open(mailtoUrl);
+      }
+    } catch (error) {
+      console.error("Ошибка при открытии почтового клиента:", error);
     }
   };
   return (
