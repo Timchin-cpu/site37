@@ -18,7 +18,17 @@ const Offer = () => {
         console.error("Ошибка при загрузке товаров:", error);
       });
   }, []);
-
+  const copyToClipboard = (text) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        // Опционально: добавьте уведомление об успешном копировании
+        console.log("P/N скопирован");
+      })
+      .catch((err) => {
+        console.error("Ошибка при копировании:", err);
+      });
+  };
   const handleCheckboxChange = (id) => {
     if (id === allItemsId) {
       // Если нажат "выбрать все"
@@ -110,7 +120,12 @@ const Offer = () => {
               <div className={styles.pN}>
                 <p>p/n:</p>
                 <p>{item.pn}</p>
-                <img src="/Group 9264.png" alt="" />
+                <img
+                  src="/Group 9264.png"
+                  alt=""
+                  onClick={() => copyToClipboard(item.pn)}
+                  style={{ cursor: "pointer" }}
+                />
               </div>
               <input
                 type="checkbox"
