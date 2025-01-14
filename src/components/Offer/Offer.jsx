@@ -141,7 +141,14 @@ const Offer = () => {
       {selectedItems.length > 0 && (
         <button
           className={styles.submitButton}
-          onClick={() => handleOfferClick(item.name)}
+          onClick={() =>
+            handleOfferClick(
+              cardItems
+                .filter((item) => selectedItems.includes(item.id))
+                .map((item) => item.name)
+                .join(", ")
+            )
+          }
         >
           Сделать предложение
         </button>
