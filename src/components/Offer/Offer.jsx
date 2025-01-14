@@ -100,16 +100,16 @@ const Offer = () => {
         {cardItems.map((item) => (
           <div className={styles.card} key={item.id}>
             <div className={styles.cardContent}>
-              <p>Станины для Mei Advance  с чипом….. </p>
+              <p>{item.name}</p>
               <div className={styles.usedCount}>
-                <p>б/у</p>
-                <p>15</p>
+                <p>{item.description}</p>
+                <p>{item.quant}</p>
               </div>
             </div>
             <div className={styles.cardAbout}>
               <div className={styles.pN}>
                 <p>p/n:</p>
-                <p>1234567890111</p>
+                <p>{item.pn}</p>
                 <img src="/Group 9264.png" alt="" />
               </div>
               <input
