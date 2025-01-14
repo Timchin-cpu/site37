@@ -175,17 +175,7 @@ function Ransom() {
             <img
               src="mail.png"
               alt=""
-              onClick={() => {
-                if (window.Telegram?.WebApp) {
-                  // Для Telegram WebApp
-                  window.Telegram.WebApp.openTelegramLink(
-                    `https://t.me/share/url?url=mailto:sale@bansys.ru`
-                  );
-                } else {
-                  // Для браузера
-                  window.open("mailto:sale@bansys.ru");
-                }
-              }}
+              onClick={() => window.open("mailto:sale@bansys.ru")}
             />
           </div>
         </div>
