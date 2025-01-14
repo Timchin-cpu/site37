@@ -142,7 +142,7 @@ function Disposal() {
             <img
               src="mail.png"
               alt=""
-              onClick={() => window.open("sale@bansys.ru")}
+              onClick={() => window.open("mailto:sale@bansys.ru")}
             />
           </div>
         </div>
