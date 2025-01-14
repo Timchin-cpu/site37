@@ -139,11 +139,9 @@ function Disposal() {
               alt=""
               onClick={() => window.open("https://t.me/Bansys_chat")}
             />
-            <img
-              src="mail.png"
-              alt=""
-              onClick={() => window.open("mailto:sale@bansys.ru")}
-            />
+            <a href="mailto:sale@bansys.ru">
+              <img src="mail.png" alt="" />
+            </a>
           </div>
         </div>
       </div>
