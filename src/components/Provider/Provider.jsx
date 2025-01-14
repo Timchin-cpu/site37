@@ -33,10 +33,19 @@ function Provider() {
           <p>{t("Ask a question")}</p>
           <div className={styles.questionSupportImgs}>
             <img
-              className={styles.supportImg}
-              src="/mail.png"
+              src="mail.png"
               alt=""
-              onClick={() => window.open("mailto:sale@bansys.ru")}
+              onClick={() => {
+                if (window.Telegram?.WebApp) {
+                  // Для Telegram WebApp
+                  window.Telegram.WebApp.openTelegramLink(
+                    `https://t.me/share/url?url=mailto:sale@bansys.ru`
+                  );
+                } else {
+                  // Для браузера
+                  window.open("mailto:sale@bansys.ru");
+                }
+              }}
             />
             <img
               className={styles.supportImg}
