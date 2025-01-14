@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Requestoffer.module.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Requestoffer = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [message, setMessage] = useState("");
-
+  const location = useLocation();
+  const itemName = location.state?.itemName;
+  console.log(itemName);
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };

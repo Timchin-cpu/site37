@@ -60,7 +60,9 @@ const Offer = () => {
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };
-
+  const handleOfferClick = (itemName) => {
+    navigate("/Requestoffer", { state: { itemName: itemName } });
+  };
   return (
     <div className={styles.container}>
       {" "}
@@ -139,9 +141,7 @@ const Offer = () => {
       {selectedItems.length > 0 && (
         <button
           className={styles.submitButton}
-          onClick={() => {
-            navigate("/Requestoffer");
-          }}
+          onClick={() => handleOfferClick(item.name)}
         >
           Сделать предложение
         </button>
