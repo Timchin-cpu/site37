@@ -36,7 +36,9 @@ function Provider() {
               className={styles.supportImg}
               src="/mail.png"
               alt=""
-              onClick={() => window.open("mailto:sale@bansys.ru")}
+              onClick={() => {
+                window.location.href = "mailto:sale@bansys.ru";
+              }}
             />
             <img
               className={styles.supportImg}
