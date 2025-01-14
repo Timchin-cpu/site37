@@ -33,7 +33,8 @@ function Provider() {
           <p>{t("Ask a question")}</p>
           <div className={styles.questionSupportImgs}>
             <img
-              src="mail.png"
+              className={styles.supportImg}
+              src="/mail.png"
               alt=""
               onClick={() => window.open("mailto:sale@bansys.ru")}
             />
