@@ -43,7 +43,12 @@ function Clients() {
           <div className={styles.questionSupportImgs}>
             <img className={styles.supportImg} src="/mail.png" alt="" />
             <img className={styles.supportImg} src="/tg.png" alt="" />
-            <img className={styles.supportImg} src="/wp.png" alt="" />
+            <img
+              className={styles.supportImg}
+              src="/wp.png"
+              alt=""
+              onClick={() => window.open("https://wa.me/79295022998")}
+            />
           </div>
         </div>
 
