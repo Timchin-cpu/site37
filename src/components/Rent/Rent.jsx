@@ -249,11 +249,26 @@ function Rent() {
             "If you need more information about hardware, you can visit the directory on our website"
           )}
         </p>
-        <button className={styles.abouService}>{t("Go to directory")}</button>
-        <button className={styles.abouService}>
+        <button
+          className={styles.abouService}
+          onClick={() => window.open("https://bansys.ru/product/")}
+        >
+          {t("Go to directory")}
+        </button>
+        <button
+          className={styles.abouService}
+          onClick={() =>
+            window.open("https://bansys.ru/services/arenda-oborudovaniya/")
+          }
+        >
           {t("Regarding Services")}
         </button>
-        <button className={styles.abouService}>{t("About MobilPay")}</button>
+        <button
+          className={styles.abouService}
+          onClick={() => window.open("https://bansys.ru/projects/mobilpay/")}
+        >
+          {t("About MobilPay")}
+        </button>
         <p className={styles.textInfo}>
           {t("The invitation link to our TELEGRAM bot")}
         </p>

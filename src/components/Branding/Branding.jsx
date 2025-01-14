@@ -263,7 +263,12 @@ function Branding() {
             "If you need more information about hardware, you can visit the directory on our website"
           )}
         </p>
-        <button className={styles.abouService}>
+        <button
+          className={styles.abouService}
+          onClick={() =>
+            window.open("https://bansys.ru/services/brendirovanie/")
+          }
+        >
           {t("Regarding Services")}
         </button>
         <p className={styles.textInfo}>

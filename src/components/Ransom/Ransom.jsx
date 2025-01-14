@@ -266,7 +266,12 @@ function Ransom() {
             "If you need more information about hardware, you can visit the directory on our website"
           )}
         </p>
-        <button className={styles.abouService}>
+        <button
+          className={styles.abouService}
+          onClick={() =>
+            window.open("https://bansys.ru/services/vykup-oborudovaniya/")
+          }
+        >
           {t("Regarding Services")}
         </button>
         <p className={styles.textInfo}>
