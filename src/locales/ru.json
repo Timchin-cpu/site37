@@ -92,5 +92,6 @@
   "Select All": " все",
   "name": "Наименование",
   "state": "состояние",
-  "quantity": "кол-во"
+  "quantity": "кол-во",
+  "Request for an offer": "Заявка на предложение"
 }

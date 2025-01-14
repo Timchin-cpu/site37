@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Offer.module.css";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Offer = () => {
+  const { t, i18n } = useTranslation();
+
   const [selectedItems, setSelectedItems] = useState([]);
   const allItemsId = "all";
 
@@ -80,11 +83,11 @@ const Offer = () => {
         </div>
       </div>
       <div className={styles.main}>
-        <p className={styles.offer}>Сделать предложение </p>
+        <p className={styles.offer}>{t("propose")} </p>
         <div className={styles.chooseAll}>
-          <p className={styles.offer}>Выбрать</p>
+          <p className={styles.offer}>{t("by")}</p>
           <div className={styles.checkboxAll}>
-            <p> все</p>
+            <p>{t("Select All")}</p>
             <input
               type="checkbox"
               id="coding"
@@ -97,24 +100,28 @@ const Offer = () => {
         </div>
         <div className={styles.buttons}>
           <div className={styles.button}>
-            <p>Наименование</p>
+            <p>{t("name")}</p>
           </div>
 
           <div className={styles.buttonsSm}>
             <div className={styles.button}>
-              <p>состояние</p>
+              <p>{t("state")}</p>
             </div>
             <div className={styles.button}>
-              <p>кол-во</p>
+              <p>{t("quantity")}</p>
             </div>
           </div>
         </div>
         {cardItems.map((item) => (
           <div className={styles.card} key={item.id}>
             <div className={styles.cardContent}>
-              <p>{item.name}</p>
+              <p>{i18n.language === "en" ? item.name_en : item.name}</p>
               <div className={styles.usedCount}>
-                <p>{item.description}</p>
+                <p>
+                  {i18n.language === "en"
+                    ? item.description_en
+                    : item.description}
+                </p>
                 <p>{item.quant}</p>
               </div>
             </div>
@@ -150,7 +157,7 @@ const Offer = () => {
             )
           }
         >
-          Сделать предложение
+          {t("propose")}
         </button>
       )}
     </div>

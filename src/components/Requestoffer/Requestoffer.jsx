@@ -100,7 +100,7 @@ const Requestoffer = () => {
       </div>
       <div className={styles.main}>
         <div className={styles.window}>
-          <h1>{t("Disposal application")}</h1>{" "}
+          <h1>{t("Request for an offer")}</h1>{" "}
           <div className={styles.input}>
             <p>{t("Respectful Name")}</p>
             <input

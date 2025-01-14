@@ -89,5 +89,6 @@
   "Select All": "Select All",
   "name": "name",
   "state": "state",
-  "quantity": "quantity"
+  "quantity": "quantity",
+  "Request for an offer": "Request for an offer"
 }
