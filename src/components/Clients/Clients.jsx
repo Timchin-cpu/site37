@@ -120,7 +120,9 @@ function Clients() {
                 "All new Bansys stocks and themed market news from one channel"
               )}
             </p>
-            <button>{t("Go to channel")}</button>
+            <button onClick={() => window.open("https://t.me/Bansys_sale")}>
+              {t("Go to channel")}
+            </button>
           </div>
         </div>
         <div className={styles.mailing}>
