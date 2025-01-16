@@ -56,7 +56,7 @@ const Requestoffer = () => {
     // Формируем сообщение, включающее выбранные товары
     const selectedItemsMessage = selectedItems.map(item => 
       `${item.name}`
-    ).join('\n\n');
+    ).join('\n');
 
     const fullMessage = `${message}\n\nВыбранные товары:\n${selectedItemsMessage}`;
 
