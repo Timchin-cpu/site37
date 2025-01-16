@@ -170,7 +170,7 @@ function Clients() {
                 onClick={() => setIsModalOpen(false)}
               />
             </div>
-            <input type="text" />
+            <input type="text" placeholder="Введите ваш e-mail" />
             <button>Отправить</button>
           </div>
         </div>
