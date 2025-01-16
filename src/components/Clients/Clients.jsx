@@ -34,6 +34,12 @@ function Clients() {
       window.open("mailto:sale@bansys.ru");
     }
   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Обработчик клика по изображению
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
   return (
     <div className={styles.container}>
       <div className={styles.main}>
@@ -127,11 +133,14 @@ function Clients() {
         </div>
         <div className={styles.mailing}>
           <p style={{ color: i18n.language === "en" ? "black" : "white" }}>
-            {t(
-              "Subscribe to the newsletter. News, popular stocks, sales, inventory clearance."
-            )}
+            {t("Enter your e-mail")}
           </p>
-          <img src="/forwardwh.png" alt="" />
+          <img
+            src="/forwardwh.png"
+            alt=""
+            onClick={handleModalOpen}
+            style={{ cursor: "pointer" }}
+          />
         </div>
         <div className={styles.footer}>
           <div>
@@ -149,6 +158,14 @@ function Clients() {
           </p>
         </div>
       </div>
+      {isModalOpen && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            {/* Содержимое модального окна */}
+            <button onClick={() => setIsModalOpen(false)}>Закрыть</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
