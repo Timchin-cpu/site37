@@ -20,6 +20,9 @@ function Clients() {
   const handleRentClick = () => {
     navigate("/Rent");
   };
+  const handleSend = () => {
+    setIsModalOpen(false);
+  };
   const handleEquipmentspareClick = () => {
     navigate("/Equipmentspare");
   };
@@ -39,6 +42,16 @@ function Clients() {
   // Обработчик клика по изображению
   const handleModalOpen = () => {
     setIsModalOpen(true);
+  };
+  const handleCopyLink = () => {
+    navigator.clipboard
+      .writeText("https://t.me/bansysbot")
+      .then(() => {
+        alert("Ссылка скопирована"); // Optional: показать уведомление
+      })
+      .catch((err) => {
+        console.error("Ошибка при копировании:", err);
+      });
   };
   return (
     <div className={styles.container}>
@@ -144,10 +157,10 @@ function Clients() {
         </div>
         <div className={styles.footer}>
           <div>
-            <p>
+            <p onClick={handleCopyLink} style={{ cursor: "pointer" }}>
               {t("Link invited to our Telegram bot")}
               <br />
-              https://t.me......................   
+              https://t.me/bansysbot
             </p>
           </div>
           <p>
@@ -171,7 +184,7 @@ function Clients() {
               />
             </div>
             <input type="text" placeholder="Введите ваш e-mail" />
-            <button>Отправить</button>
+            <button onClick={handleSendhandleSend}>Отправить</button>
           </div>
         </div>
       )}
