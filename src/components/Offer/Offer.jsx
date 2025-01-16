@@ -63,8 +63,13 @@ const Offer = () => {
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };
-  const handleOfferClick = (itemName) => {
-    navigate("/Requestoffer", { state: { itemName: itemName } });
+  const handleOfferClick = () => {
+    const selectedProducts = cardItems.filter(item => 
+      selectedItems.includes(item.id)
+    );
+    navigate("/Requestoffer", { 
+      state: { selectedItems: selectedProducts } 
+    });
   };
   return (
     <div className={styles.container}>

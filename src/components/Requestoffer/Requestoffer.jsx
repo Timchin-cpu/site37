@@ -54,7 +54,7 @@ const Requestoffer = () => {
     const russianBrand = t("Request for an offer", { lng: "ru" });
 
     // Отправка данных на сервер
-    fetch("/api/submit", {
+    fetch("/api/submit1", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
