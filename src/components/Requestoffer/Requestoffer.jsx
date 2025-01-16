@@ -8,8 +8,8 @@ const Requestoffer = () => {
   const { t } = useTranslation();
   const [message, setMessage] = useState("");
   const location = useLocation();
-  const itemName = location.state?.itemName;
-  console.log(itemName);
+  const selectedItems = location.state?.selectedItems || [];  
+  console.log(selectedItems);
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };
