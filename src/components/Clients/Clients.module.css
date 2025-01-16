@@ -273,6 +273,8 @@
   border-radius: 8px;
   height: 31px;
   border: none;
+  color: white;
+  padding-bottom: 11px;
 }
 .modalContent input {
   border: none;
@@ -280,10 +282,13 @@
   height: 31px;
   background: #eeeeee;
   box-shadow: 0px 4px 16.1px 0px #00000040 inset;
+  padding-bottom: 8px;
 }
 .modalContent img {
   width: 22px;
   height: 22px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 .imgArrow {
   display: flex;
