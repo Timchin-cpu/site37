@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Requestredemption = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [message, setMessage] = useState("");
@@ -139,11 +141,24 @@ const Requestredemption = () => {
             ></textarea>
           </div>
           <div className={styles.checkbox}>
-            <input type="checkbox" id="coding" name="interest" value="coding" />
+            <input
+              type="checkbox"
+              id="coding"
+              name="interest"
+              value="coding"
+              checked={isChecked}
+              onChange={(e) => setIsChecked(e.target.value)}
+            />
             <p> {t("Agree to process personal data")}</p>
           </div>
           <div className={styles.send}>
-            <button onClick={handleSubmit}>{t("send")}</button>
+            <button
+              onClick={handleSubmit}
+              disabled={!isChecked}
+              className={styles.send}
+            >
+              {t("send")}
+            </button>
           </div>
         </div>
       </div>
