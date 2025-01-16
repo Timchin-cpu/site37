@@ -51,7 +51,7 @@ const Requestoffer = () => {
     }
 
     // Получаем русскую версию текста
-    const russianBrand = t("brand", { lng: "ru" });
+    const russianBrand = t("Request for an offer", { lng: "ru" });
 
     // Отправка данных на сервер
     fetch("/api/submit", {

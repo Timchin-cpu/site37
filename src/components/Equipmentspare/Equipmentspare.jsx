@@ -90,7 +90,7 @@ function Equipmentspare() {
     }
 
     // Получаем русскую версию текста
-    const russianBrand = t("brand", { lng: "ru" });
+    const russianBrand = t("Equipment and spare parts", { lng: "ru" });
 
     // Отправка данных на сервер
     fetch("/api/submit", {

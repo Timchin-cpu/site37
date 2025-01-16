@@ -49,7 +49,7 @@ const RequestDisposal = () => {
     }
 
     // Получаем русскую версию текста
-    const russianBrand = t("brand", { lng: "ru" });
+    const russianBrand = t("Disposal application", { lng: "ru" });
 
     // Отправка данных на сервер
     fetch("/api/submit", {

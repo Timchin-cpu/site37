@@ -65,7 +65,7 @@ function Rent() {
     }
 
     // Получаем русскую версию текста
-    const russianBrand = t("brand", { lng: "ru" });
+    const russianBrand = t("rental fee for equipment", { lng: "ru" });
 
     // Отправка данных на сервер
     fetch("/api/submit", {
