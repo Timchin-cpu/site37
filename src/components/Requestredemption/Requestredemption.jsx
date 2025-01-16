@@ -68,6 +68,7 @@ const Requestredemption = () => {
       .then((response) => response.json())
       .then((data) => {
         alert("Данные успешно отправлены");
+        navigate("/");
       })
       .catch((error) => {
         console.error("Ошибка при отправке:", error);

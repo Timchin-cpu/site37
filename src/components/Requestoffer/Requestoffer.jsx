@@ -73,10 +73,12 @@ const Requestoffer = () => {
         brand: russianBrand,
         selectedItems: selectedItems // Добавляем выбранные товары в запрос
       }),
+      
     })
       .then((response) => response.json())
       .then((data) => {
         alert("Данные успешно отправлены");
+        navigate("/");
       })
       .catch((error) => {
         console.error("Ошибка при отправке:", error);
