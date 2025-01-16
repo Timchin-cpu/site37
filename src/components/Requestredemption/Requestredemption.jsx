@@ -152,11 +152,7 @@ const Requestredemption = () => {
             <p> {t("Agree to process personal data")}</p>
           </div>
           <div className={styles.send}>
-            <button
-              onClick={handleSubmit}
-              disabled={!isChecked}
-              className={styles.send}
-            >
+            <button onClick={handleSubmit} disabled={!isChecked}>
               {t("send")}
             </button>
           </div>
