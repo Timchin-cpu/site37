@@ -53,6 +53,13 @@ const Requestoffer = () => {
     // Получаем русскую версию текста
     const russianBrand = t("Request for an offer", { lng: "ru" });
 
+    // Формируем сообщение, включающее выбранные товары
+    const selectedItemsMessage = selectedItems.map(item => 
+      `${item.name}\nКоличество: ${item.quant}\nСостояние: ${item.description}\nP/N: ${item.pn}`
+    ).join('\n\n');
+
+    const fullMessage = `${message}\n\nВыбранные товары:\n${selectedItemsMessage}`;
+
     // Отправка данных на сервер
     fetch("/api/submit1", {
       method: "POST",
@@ -62,9 +69,9 @@ const Requestoffer = () => {
       body: JSON.stringify({
         ...userData,
         userId: tgUserId,
-        // type: selectedOption,
-        message: message,
-        brand: russianBrand, // Добавляем русскую версию текста
+        message: fullMessage,
+        brand: russianBrand,
+        selectedItems: selectedItems // Добавляем выбранные товары в запрос
       }),
     })
       .then((response) => response.json())
@@ -75,7 +82,7 @@ const Requestoffer = () => {
         console.error("Ошибка при отправке:", error);
         alert("Произошла ошибка при отправке");
       });
-  };
+};
   const handleInputChange = (field, value) => {
     setUserData((prev) => ({
       ...prev,
