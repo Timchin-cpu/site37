@@ -162,7 +162,12 @@ function Clients() {
         <div className={styles.modal}>
           <div className={styles.modalContent}>
             {/* Содержимое модального окна */}
-            <button onClick={() => setIsModalOpen(false)}>Закрыть</button>
+            {/* <button onClick={() => setIsModalOpen(false)}>Закрыть</button> */}
+            <div>
+              <img src="/down.png" alt="" />
+            </div>
+            <input type="text" />
+            <button>Отправить</button>
           </div>
         </div>
       )}

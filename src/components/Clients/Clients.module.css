@@ -258,3 +258,18 @@
   width: 90%;
   max-height: 80vh;
 }
+.modalContent button {
+  background: #baa36e;
+  font-family: Raleway;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.05000000074505806px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  border-radius: 8px;
+}
+.modalContent input {
+  border-radius: 8px;
+}
