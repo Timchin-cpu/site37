@@ -295,6 +295,7 @@
   text-decoration-skip-ink: none;
   color: white;
   padding-left: 8px;
+  outline: none;
 }
 .modalContent input input:focus {
   outline: none;
