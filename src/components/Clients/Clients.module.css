@@ -296,6 +296,9 @@
   color: white;
   padding-left: 8px;
 }
+.modalContent input input:focus {
+  outline: none;
+}
 .modalContent img {
   width: 22px;
   height: 22px;
