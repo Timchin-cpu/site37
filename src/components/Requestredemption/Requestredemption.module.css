@@ -182,7 +182,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}.send button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
