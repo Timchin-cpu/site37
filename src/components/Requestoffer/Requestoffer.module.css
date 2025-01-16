@@ -2,8 +2,13 @@
   background: #d9d9d9;
 
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100%;
   font-family: Raleway;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-y: auto;
 }
 .main {
@@ -13,7 +18,8 @@
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  height: calc(100vh - 2px);
+  /* padding-top: 16%; Добавить отступ вместо фиксированного позиционирования */
+  flex: 0.95;
 }
 
 .window {
@@ -180,8 +186,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
