@@ -285,6 +285,14 @@
   background: #eeeeee;
   box-shadow: 0px 4px 16.1px 0px #00000040 inset;
   margin-bottom: 8px;
+  font-family: Raleway;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.05000000074505806px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 .modalContent img {
   width: 22px;
