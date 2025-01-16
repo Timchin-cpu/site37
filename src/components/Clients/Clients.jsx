@@ -184,7 +184,7 @@ function Clients() {
               />
             </div>
             <input type="text" placeholder="Введите ваш e-mail" />
-            <button onClick={handleSendhandleSend}>Отправить</button>
+            <button onClick={handleSend}>Отправить</button>
           </div>
         </div>
       )}
