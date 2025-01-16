@@ -163,7 +163,7 @@ function Clients() {
           <div className={styles.modalContent}>
             {/* Содержимое модального окна */}
             {/* <button onClick={() => setIsModalOpen(false)}>Закрыть</button> */}
-            <div>
+            <div className={styles.imgArrow}>
               <img src="/down.png" alt="" />
             </div>
             <input type="text" />
