@@ -13,7 +13,7 @@
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  height: calc(100vh - 2px);
+  padding-top: 20px; /* Добавить отступ вместо фиксированного позиционирования */
 }
 
 .window {
@@ -164,8 +164,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
