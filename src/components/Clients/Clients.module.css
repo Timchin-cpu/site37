@@ -269,7 +269,15 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   border-radius: 8px;
+  height: 31px;
+  border: none;
 }
 .modalContent input {
+  border: none;
   border-radius: 8px;
+  height: 31px;
+}
+.modalContent img {
+  width: 22px;
+  height: 22px;
 }
