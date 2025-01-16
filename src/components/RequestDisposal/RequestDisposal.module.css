@@ -5,6 +5,9 @@
   height: 100vh;
   font-family: Raleway;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .main {
   display: flex;
@@ -13,7 +16,8 @@
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  padding-top: 16%; /* Добавить отступ вместо фиксированного позиционирования */
+  /* padding-top: 16%; Добавить отступ вместо фиксированного позиционирования */
+  flex: 0.95;
 }
 
 .window {
