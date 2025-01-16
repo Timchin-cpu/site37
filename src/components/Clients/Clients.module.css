@@ -287,7 +287,7 @@
 .modalContent img {
   width: 22px;
   height: 22px;
-  padding-top: 11px;
+  /* padding-top: 11px; */
   margin-bottom: 11px;
 }
 .imgArrow {
