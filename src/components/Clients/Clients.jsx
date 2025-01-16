@@ -47,7 +47,7 @@ function Clients() {
     navigator.clipboard
       .writeText("https://t.me/bansysbot")
       .then(() => {
-        alert("Ссылка скопирована"); // Optional: показать уведомление
+        console.log("Ссылка скопирована"); // Optional: показать уведомление
       })
       .catch((err) => {
         console.error("Ошибка при копировании:", err);
