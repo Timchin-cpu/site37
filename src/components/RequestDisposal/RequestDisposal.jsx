@@ -80,10 +80,6 @@ const RequestDisposal = () => {
       [field]: value,
     }));
   };
-  const handleFocus = () => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-  };
   return (
     <div className={styles.container}>
       {" "}
@@ -107,7 +103,6 @@ const RequestDisposal = () => {
             <p>{t("Respectful Name")}</p>
             <input
               type="text"
-              onFocus={handleFocus}
               value={userData.name}
               onChange={(e) => handleInputChange("name", e.target.value)}
             />

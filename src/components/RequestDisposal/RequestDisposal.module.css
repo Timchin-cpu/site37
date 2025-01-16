@@ -8,6 +8,11 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%; /* вместо 100vh */
 }
 .main {
   display: flex;
@@ -18,6 +23,7 @@
   margin: 0 auto;
   /* padding-top: 16%; Добавить отступ вместо фиксированного позиционирования */
   flex: 0.95;
+  position: relative;
 }
 
 .window {
