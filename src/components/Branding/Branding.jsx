@@ -273,7 +273,7 @@ function Branding() {
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
         </div>
-        jsx
+
         <div className={styles.attach}>
           <label htmlFor="file-upload">
             <p>{t("Attach a file")}</p>
