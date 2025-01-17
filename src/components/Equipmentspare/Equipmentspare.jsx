@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function Equipmentspare() {
+  const tg = window.Telegram.WebApp;
+  tg.disableVerticalSwipes();
   const { t, i18n } = useTranslation();
   const [message, setMessage] = useState("");
 
@@ -52,7 +54,6 @@ function Equipmentspare() {
     setSelectedOption(option.label);
     setIsOpen(false);
   };
-  const tg = window.Telegram.WebApp;
   const tgUserId = tg.initDataUnsafe.user.id;
   const [userData, setUserData] = useState({
     name: "",

@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const RequestDisposal = () => {
+  const tg = window.Telegram.WebApp;
+  tg.disableVerticalSwipes();
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [message, setMessage] = useState("");
@@ -11,7 +13,6 @@ const RequestDisposal = () => {
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };
-  const tg = window.Telegram.WebApp;
   const tgUserId = tg.initDataUnsafe.user.id;
   const [userData, setUserData] = useState({
     name: "",

@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Offer = () => {
+  const tg = window.Telegram.WebApp;
+  tg.disableVerticalSwipes();
   const { t, i18n } = useTranslation();
 
   const [selectedItems, setSelectedItems] = useState([]);
@@ -64,11 +66,11 @@ const Offer = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };
   const handleOfferClick = () => {
-    const selectedProducts = cardItems.filter(item => 
+    const selectedProducts = cardItems.filter((item) =>
       selectedItems.includes(item.id)
     );
-    navigate("/Requestoffer", { 
-      state: { selectedItems: selectedProducts } 
+    navigate("/Requestoffer", {
+      state: { selectedItems: selectedProducts },
     });
   };
   return (

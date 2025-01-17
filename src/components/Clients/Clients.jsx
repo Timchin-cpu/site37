@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import { useNavigate } from "react-router-dom";
 function Clients() {
+  const tg = window.Telegram.WebApp;
+  tg.disableVerticalSwipes();
   const navigate = useNavigate();
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад

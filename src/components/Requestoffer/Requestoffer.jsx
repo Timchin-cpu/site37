@@ -4,16 +4,17 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Requestoffer = () => {
+  const tg = window.Telegram.WebApp;
+  tg.disableVerticalSwipes();
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [message, setMessage] = useState("");
   const location = useLocation();
-  const selectedItems = location.state?.selectedItems || [];  
+  const selectedItems = location.state?.selectedItems || [];
   console.log(selectedItems);
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };
-  const tg = window.Telegram.WebApp;
   const tgUserId = tg.initDataUnsafe.user.id;
   const [userData, setUserData] = useState({
     name: "",
@@ -54,9 +55,9 @@ const Requestoffer = () => {
     const russianBrand = t("Request for an offer", { lng: "ru" });
 
     // Формируем сообщение, включающее выбранные товары
-    const selectedItemsMessage = selectedItems.map(item => 
-      `${item.name}`
-    ).join('\n');
+    const selectedItemsMessage = selectedItems
+      .map((item) => `${item.name}`)
+      .join("\n");
 
     const fullMessage = `${message}\n\nВыбранные товары:\n${selectedItemsMessage}`;
 
@@ -71,9 +72,8 @@ const Requestoffer = () => {
         userId: tgUserId,
         message: fullMessage,
         brand: russianBrand,
-        selectedItems: selectedItems // Добавляем выбранные товары в запрос
+        selectedItems: selectedItems, // Добавляем выбранные товары в запрос
       }),
-      
     })
       .then((response) => response.json())
       .then((data) => {
@@ -84,7 +84,7 @@ const Requestoffer = () => {
         console.error("Ошибка при отправке:", error);
         alert("Произошла ошибка при отправке");
       });
-};
+  };
   const handleInputChange = (field, value) => {
     setUserData((prev) => ({
       ...prev,

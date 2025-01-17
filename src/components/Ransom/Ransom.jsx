@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function Ransom() {
+  const tg = window.Telegram.WebApp;
+  tg.disableVerticalSwipes();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const [message, setMessage] = useState("");
@@ -27,7 +29,6 @@ function Ransom() {
     setSelectedOption(option.label);
     setIsOpen(false);
   };
-  const tg = window.Telegram.WebApp;
   const tgUserId = tg.initDataUnsafe.user.id;
   const [userData, setUserData] = useState({
     name: "",
