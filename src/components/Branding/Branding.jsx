@@ -98,31 +98,32 @@ function Branding() {
     }));
   };
   const [selectedFile, setSelectedFile] = useState(null);
+  console.log(selectedFile);
 
-const handleFileUpload = async (event) => {
-  const file = event.target.files[0];
-  if (file) {
-    const formData = new FormData();
-    formData.append('file', file);
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const formData = new FormData();
+      formData.append("file", file);
 
-    try {
-      const response = await fetch('/api/upload', {
-        method: 'POST',
-        body: formData
-      });
-      
-      if (response.ok) {
-        const data = await response.json();
-        setSelectedFile(data.fileUrl);
-      } else {
-        alert('Ошибка при загрузке файла');
+      try {
+        const response = await fetch("/api/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setSelectedFile(data.fileUrl);
+        } else {
+          alert("Ошибка при загрузке файла");
+        }
+      } catch (error) {
+        console.error("Ошибка:", error);
+        alert("Произошла ошибка при загрузке файла");
       }
-    } catch (error) {
-      console.error('Ошибка:', error);
-      alert('Произошла ошибка при загрузке файла');
     }
-  }
-};
+  };
   return (
     <div className={styles.container}>
       <div className={styles.logos}>
@@ -273,19 +274,18 @@ const handleFileUpload = async (event) => {
           ></textarea>
         </div>
         jsx
-<div className={styles.attach}>
-  <label htmlFor="file-upload">
-    <p>{t("Attach a file")}</p>
-  </label>
-  <input
-    id="file-upload"
-    type="file" 
-    onChange={handleFileUpload}
-    style={{display: 'none'}}
-    accept="image/*"
-  />
-</div>
-
+        <div className={styles.attach}>
+          <label htmlFor="file-upload">
+            <p>{t("Attach a file")}</p>
+          </label>
+          <input
+            id="file-upload"
+            type="file"
+            onChange={handleFileUpload}
+            style={{ display: "none" }}
+            accept="image/*"
+          />
+        </div>
         <div className={styles.checkbox}>
           <input type="checkbox" id="coding" name="interest" value="coding" />
           <p> {t("Agree to process personal data")}</p>
