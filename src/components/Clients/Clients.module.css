@@ -314,10 +314,11 @@
   display: flex;
   align-items: flex-end; /* Выравнивание по нижнему краю */
   gap: 5px; /* Отступ между текстом и картинкой */
+  justify-content: center;
 }
 
 .tgWin img {
   width: 10px;
   height: auto;
-  margin-bottom: 2px; /* Небольшой отступ снизу для выравнивания */
+  margin-bottom: 8px; /* Небольшой отступ снизу для выравнивания */
 }
