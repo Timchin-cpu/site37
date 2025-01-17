@@ -314,3 +314,6 @@
   align-items: center;
   display: flex;
 }
+.tgWin img {
+  width: 11px;
+}
