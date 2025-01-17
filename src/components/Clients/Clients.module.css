@@ -310,3 +310,7 @@
   display: flex;
   justify-content: end;
 }
+.tgWin {
+  align-items: center;
+  display: flex;
+}

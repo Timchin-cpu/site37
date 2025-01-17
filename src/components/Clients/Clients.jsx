@@ -145,11 +145,15 @@ function Clients() {
           </div>
         </div>
         <div className={styles.mailing}>
-          <p style={{ color: i18n.language === "en" ? "black" : "white" }}>
-            {t(
-              "Subscribe to the newsletter. News, popular stocks, sales, inventory clearance."
-            )}
-          </p>
+          <div className={styles.tgWin}>
+            <p style={{ color: i18n.language === "en" ? "black" : "white" }}>
+              {t(
+                "Subscribe to the newsletter. News, popular stocks, sales, inventory clearance."
+              )}
+            </p>
+            <img src="/windows.png" alt="" />
+          </div>
+
           <img
             src="/forwardwh.png"
             alt=""
