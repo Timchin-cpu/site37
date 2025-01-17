@@ -36,7 +36,7 @@
   margin: 0 auto;
 }
 .circleNavImg {
-  width: 81px;
+  width: 60px;
   opacity: 67%;
 }
 .garantCircleNav {
@@ -104,6 +104,7 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 30px;
+  padding-bottom: 38px;
 }
 .title {
   padding-top: 10px;
