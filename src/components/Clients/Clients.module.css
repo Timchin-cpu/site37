@@ -311,9 +311,13 @@
   justify-content: end;
 }
 .tgWin {
-  align-items: center;
   display: flex;
+  align-items: flex-end; /* Выравнивание по нижнему краю */
+  gap: 5px; /* Отступ между текстом и картинкой */
 }
+
 .tgWin img {
-  width: 11px;
+  width: 10px;
+  height: auto;
+  margin-bottom: 2px; /* Небольшой отступ снизу для выравнивания */
 }
