@@ -4,8 +4,9 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 function Branding() {
-  const [message, setMessage] = useState("");
   const tg = window.Telegram.WebApp;
+  tg.disableVerticalSwipes();
+  const [message, setMessage] = useState("");
   const tgUserId = tg.initDataUnsafe.user.id;
   const [userData, setUserData] = useState({
     name: "",
