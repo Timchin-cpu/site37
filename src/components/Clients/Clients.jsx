@@ -145,14 +145,11 @@ function Clients() {
           </div>
         </div>
         <div className={styles.mailing}>
-          <div className={styles.tgWin}>
-            <p style={{ color: i18n.language === "en" ? "black" : "white" }}>
-              {t(
-                "Subscribe to the newsletter. News, popular stocks, sales, inventory clearance."
-              )}
-            </p>
-            <img src="/windows.png" alt="" />
-          </div>
+          <p style={{ color: i18n.language === "en" ? "black" : "white" }}>
+            {t(
+              "Subscribe to the newsletter. News, popular stocks, sales, inventory clearance."
+            )}
+          </p>
 
           <img
             src="/forwardwh.png"
@@ -162,12 +159,13 @@ function Clients() {
           />
         </div>
         <div className={styles.footer}>
-          <div>
+          <div className={styles.tgWin}>
             <p onClick={handleCopyLink} style={{ cursor: "pointer" }}>
               {t("Link invited to our Telegram bot")}
               <br />
               https://t.me/bansysbot
             </p>
+            <img src="/windows.png" alt="" />
           </div>
           <p>
             {t(
