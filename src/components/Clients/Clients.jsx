@@ -146,7 +146,9 @@ function Clients() {
         </div>
         <div className={styles.mailing}>
           <p style={{ color: i18n.language === "en" ? "black" : "white" }}>
-            {t("Enter your e-mail")}
+            {t(
+              "Subscribe to the newsletter. News, popular stocks, sales, inventory clearance."
+            )}
           </p>
           <img
             src="/forwardwh.png"
