@@ -40,14 +40,14 @@
   opacity: 67%;
 }
 .garantCircleNav {
-  width: 51px;
-  height: 43.37px;
+  height: 27px;
+  width: 32px;
 }
 .circleNav {
   border-radius: 50%;
   background-color: white;
   width: 60px;
-  height: 81px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
