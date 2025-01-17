@@ -55,12 +55,7 @@ function Provider() {
         <div className={styles.mainConten}>
           <div className={styles.conten}>
             <img src="/vykup 1.png" alt="" />
-            <div
-              className={styles.textConten}
-              style={{
-                background: i18n.language === "en" ? "white" : "#ffdddd",
-              }}
-            >
+            <div className={styles.textConten}>
               <h2>{t("Equipment repurchase")}</h2>
               <p>
                 {t(
@@ -87,12 +82,7 @@ function Provider() {
         </div>
         <div className={styles.mainContenSec}>
           <div className={styles.conten}>
-            <div
-              className={styles.textConten}
-              style={{
-                background: i18n.language === "en" ? "white" : "#ffdddd",
-              }}
-            >
+            <div className={styles.textConten}>
               <h2>{t("utilizeMax")}</h2>
               <p>
                 {t(
