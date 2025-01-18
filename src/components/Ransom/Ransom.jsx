@@ -66,7 +66,7 @@ function Ransom() {
     }
 
     // Получаем русскую версию текста
-    const russianBrand = t("brand", { lng: "ru" });
+    const russianBrand = t("ransom", { lng: "ru" });
 
     // Отправка данных на сервер
     fetch("/api/submit", {
