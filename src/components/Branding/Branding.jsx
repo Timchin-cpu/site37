@@ -115,7 +115,7 @@ function Branding() {
 
         if (response.ok) {
           const data = await response.json();
-          setSelectedFile(data.fileUrl);
+          setSelectedFile(file.name);
         } else {
           alert("Ошибка при загрузке файла");
         }
