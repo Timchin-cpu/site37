@@ -91,7 +91,7 @@ function Equipmentspare() {
     }
 
     // Получаем русскую версию текста
-    const russianBrand = t("Equipment and spare parts", { lng: "ru" });
+    const russianBrand = t("brand", { lng: "ru" });
 
     // Отправка данных на сервер
     fetch("/api/submit", {
@@ -104,6 +104,7 @@ function Equipmentspare() {
         userId: tgUserId,
         type: selectedOption,
         message: message,
+        photoPath: selectedFile, // добавляем URL файла
         brand: russianBrand, // Добавляем русскую версию текста
       }),
     })
@@ -121,6 +122,34 @@ function Equipmentspare() {
       ...prev,
       [field]: value,
     }));
+  };
+  const [selectedFile, setSelectedFile] = useState(null);
+  console.log(selectedFile);
+
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        const response = await fetch("/api/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          // const data = await response.json();
+          setSelectedFile(file.name);
+          console.log(file.name);
+        } else {
+          alert("Ошибка при загрузке файла");
+        }
+      } catch (error) {
+        console.error("Ошибка:", error);
+        alert("Произошла ошибка при загрузке файла");
+      }
+    }
   };
   return (
     <div className={styles.container}>
@@ -253,7 +282,16 @@ function Equipmentspare() {
           ></textarea>
         </div>
         <div className={styles.attach}>
-          <p>{t("Attach a file")}</p>
+          <label htmlFor="file-upload">
+            <p>{t("Attach a file")}</p>
+          </label>
+          <input
+            id="file-upload"
+            type="file"
+            onChange={handleFileUpload}
+            style={{ display: "none" }}
+            accept="image/*"
+          />
         </div>
 
         <div className={styles.checkbox}>
