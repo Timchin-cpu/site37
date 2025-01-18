@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const RequestDisposal = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  console.log(selectedFile);
   const tg = window.Telegram.WebApp;
   tg.disableVerticalSwipes();
   const navigate = useNavigate();
