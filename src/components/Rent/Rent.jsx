@@ -104,8 +104,58 @@ function Rent() {
   const handleFileUpload = async (event) => {
     const file = event.target.files[0];
     if (file) {
+      // Транслитерация русского имени файла
+      const transliterateFileName = (name) => {
+        const ru = {
+          а: "a",
+          б: "b",
+          в: "v",
+          г: "g",
+          д: "d",
+          е: "e",
+          ё: "yo",
+          ж: "zh",
+          з: "z",
+          и: "i",
+          й: "y",
+          к: "k",
+          л: "l",
+          м: "m",
+          н: "n",
+          о: "o",
+          п: "p",
+          р: "r",
+          с: "s",
+          т: "t",
+          у: "u",
+          ф: "f",
+          х: "h",
+          ц: "ts",
+          ч: "ch",
+          ш: "sh",
+          щ: "sch",
+          ъ: "",
+          ы: "y",
+          ь: "",
+          э: "e",
+          ю: "yu",
+          я: "ya",
+        };
+
+        return name
+          .toLowerCase()
+          .split("")
+          .map((char) => ru[char] || char)
+          .join("")
+          .replace(/\s+/g, "_"); // Заменяем пробелы на нижнее подчеркивание
+      };
+
       const formData = new FormData();
-      formData.append("file", file);
+      const englishFileName = transliterateFileName(file.name);
+
+      // Создаем новый файл с английским именем
+      const newFile = new File([file], englishFileName, { type: file.type });
+      formData.append("file", newFile);
 
       try {
         const response = await fetch("/api/upload", {
@@ -114,9 +164,8 @@ function Rent() {
         });
 
         if (response.ok) {
-          // const data = await response.json();
-          setSelectedFile(file.name);
-          console.log(file.name);
+          setSelectedFile(englishFileName);
+          console.log(englishFileName);
         } else {
           alert("Ошибка при загрузке файла");
         }
