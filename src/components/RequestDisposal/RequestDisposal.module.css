@@ -171,3 +171,18 @@
   align-items: center;
   justify-content: center;
 }
+.attach {
+  font-family: Raleway;
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.05000000074505806px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 87%;
+  color: white;
+}

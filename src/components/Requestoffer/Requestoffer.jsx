@@ -12,6 +12,8 @@ const Requestoffer = () => {
   const location = useLocation();
   const selectedItems = location.state?.selectedItems || [];
   console.log(selectedItems);
+  const [selectedFile, setSelectedFile] = useState(null);
+
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
   };
@@ -72,6 +74,8 @@ const Requestoffer = () => {
         userId: tgUserId,
         message: fullMessage,
         brand: russianBrand,
+        photoPath: selectedFile,
+
         selectedItems: selectedItems, // Добавляем выбранные товары в запрос
       }),
     })
@@ -90,6 +94,80 @@ const Requestoffer = () => {
       ...prev,
       [field]: value,
     }));
+  };
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      // Транслитерация русского имени файла
+      const transliterateFileName = (name) => {
+        const ru = {
+          а: "a",
+          б: "b",
+          в: "v",
+          г: "g",
+          д: "d",
+          е: "e",
+          ё: "yo",
+          ж: "zh",
+          з: "z",
+          и: "i",
+          й: "y",
+          к: "k",
+          л: "l",
+          м: "m",
+          н: "n",
+          о: "o",
+          п: "p",
+          р: "r",
+          с: "s",
+          т: "t",
+          у: "u",
+          ф: "f",
+          х: "h",
+          ц: "ts",
+          ч: "ch",
+          ш: "sh",
+          щ: "sch",
+          ъ: "",
+          ы: "y",
+          ь: "",
+          э: "e",
+          ю: "yu",
+          я: "ya",
+        };
+
+        return name
+          .toLowerCase()
+          .split("")
+          .map((char) => ru[char] || char)
+          .join("")
+          .replace(/\s+/g, "_"); // Заменяем пробелы на нижнее подчеркивание
+      };
+
+      const formData = new FormData();
+      const englishFileName = transliterateFileName(file.name);
+
+      // Создаем новый файл с английским именем
+      const newFile = new File([file], englishFileName, { type: file.type });
+      formData.append("file", newFile);
+
+      try {
+        const response = await fetch("/api/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          setSelectedFile(englishFileName);
+          console.log(englishFileName);
+        } else {
+          alert("Ошибка при загрузке файла");
+        }
+      } catch (error) {
+        console.error("Ошибка:", error);
+        alert("Произошла ошибка при загрузке файла");
+      }
+    }
   };
   return (
     <div className={styles.container}>
@@ -147,6 +225,18 @@ const Requestoffer = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
+          </div>
+          <div className={styles.attach}>
+            <label htmlFor="file-upload">
+              <p>{t("Attach a file")}</p>
+            </label>
+            <input
+              id="file-upload"
+              type="file"
+              onChange={handleFileUpload}
+              style={{ display: "none" }}
+              accept="image/*"
+            />
           </div>
           <div className={styles.checkbox}>
             <input type="checkbox" id="coding" name="interest" value="coding" />
