@@ -79,6 +79,7 @@ function Branding() {
         userId: tgUserId,
         type: selectedOption,
         message: message,
+        fileUrl: selectedFile, // добавляем URL файла
         brand: russianBrand, // Добавляем русскую версию текста
       }),
     })
