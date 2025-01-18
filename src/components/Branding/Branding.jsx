@@ -114,8 +114,9 @@ function Branding() {
         });
 
         if (response.ok) {
-          const data = await response.json();
+          // const data = await response.json();
           setSelectedFile(file.name);
+          console.log(file.name);
         } else {
           alert("Ошибка при загрузке файла");
         }
