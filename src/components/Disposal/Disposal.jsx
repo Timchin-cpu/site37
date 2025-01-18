@@ -155,7 +155,8 @@ function Disposal() {
           .toLowerCase()
           .split("")
           .map((char) => ru[char] || char)
-          .join("");
+          .join("")
+          .replace(/\s+/g, "_"); // Заменяем пробелы на нижнее подчеркивание
       };
 
       const formData = new FormData();
