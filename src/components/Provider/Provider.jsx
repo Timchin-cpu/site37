@@ -95,7 +95,7 @@ function Provider() {
             <img src="/utilisatsia2 1.png" alt="" />
           </div>
           <div className={styles.buttonConatiner}>
-            <button onClick={handleRequestDisposalClick}>{t("order")}</button>
+            <button onClick={handleRequestDisposalClick}>{t("ORDER")}</button>
           </div>
         </div>
 
