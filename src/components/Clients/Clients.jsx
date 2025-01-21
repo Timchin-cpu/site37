@@ -41,9 +41,8 @@ function Clients() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        ...userData,
-        userId: tgUserId,
         isEmailOnly: true,
+        email: userData.email,
       }),
     })
       .then((response) => response.json())
