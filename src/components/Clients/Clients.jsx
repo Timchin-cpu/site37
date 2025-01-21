@@ -95,16 +95,20 @@ function Clients() {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
-        <div className={styles.logos}>
-          <img className={styles.logo} src="/BANSYS.png" alt="" />
-          <img
-            className={styles.arrow}
-            src="/arrow.png"
-            alt=""
-            onClick={handleBackClick}
-            style={{ cursor: "pointer" }} // Добавьте стиль курсора для указания, что элемент кликабелен
-          />
+        <div className={style.logosDivs}>
+          {" "}
+          <div className={styles.logos}>
+            <img className={styles.logo} src="/BANSYS.png" alt="" />
+            <img
+              className={styles.arrow}
+              src="/arrow.png"
+              alt=""
+              onClick={handleBackClick}
+              style={{ cursor: "pointer" }} // Добавьте стиль курсора для указания, что элемент кликабелен
+            />
+          </div>
         </div>
+
         <div className={styles.questionSupport}>
           {" "}
           <p>{t("Ask a question")}</p>
