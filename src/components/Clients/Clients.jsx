@@ -6,6 +6,12 @@ import { useNavigate } from "react-router-dom";
 function Clients() {
   const tg = window.Telegram.WebApp;
   tg.disableVerticalSwipes();
+  const tgUserId = tg.initDataUnsafe.user.id;
+  const [userData, setUserData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+  });
   const navigate = useNavigate();
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
@@ -220,7 +226,12 @@ function Clients() {
                 onClick={() => setIsModalOpen(false)}
               />
             </div>
-            <input type="text" placeholder="Введите ваш e-mail" />
+            <input
+              type="text"
+              placeholder="Введите ваш e-mail"
+              value={userData.email}
+              onChange={(e) => handleInputChange("email", e.target.value)}
+            />
             <button onClick={handleSend}>Отправить</button>
           </div>
         </div>
