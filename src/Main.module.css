@@ -37,7 +37,6 @@
 }
 .circleNavImg {
   width: 60px;
-  opacity: 67%;
 }
 .garantCircleNav {
   height: 27px;
@@ -51,7 +50,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 67%;
 }
 .content {
   align-items: center;
