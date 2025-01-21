@@ -323,15 +323,11 @@
   margin-bottom: 8px; /* Небольшой отступ снизу для выравнивания */
 }
 .logosDivs {
-  width: 100%;
-  /* padding-top: 18px;
-  padding-bottom: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; */
-  width: 100%;
-  position: sticky; /* Добавляем фиксированное позиционирование */
-  top: 0; /* Прикрепляем к верху */
-  background: #17453b; /* Добавляем фон, чтобы контент не просвечивал */
+  background: #17453b;
+  position: sticky;
+  top: 0;
+  width: 101vw;
   z-index: 100;
+  display: flex;
+  justify-content: center;
 }
