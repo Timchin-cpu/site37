@@ -54,13 +54,15 @@
   opacity: 67%;
 }
 .content {
-  display: flex;
-  justify-content: space-between;
-  width: 55%;
   align-items: center;
-  /* justify-content: center; */
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
   padding-top: 29px;
+  text-align: center;
+  width: 67%;
+}
+.content p {
+  width: 63% !important;
 }
 .role button {
   font-size: 15px;
