@@ -55,9 +55,10 @@
 }
 .content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 55%;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   text-align: center;
   padding-top: 29px;
 }
