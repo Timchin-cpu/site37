@@ -30,7 +30,7 @@ function Clients() {
   };
   const handleSend = () => {
     // Получаем русскую версию текста
-    const russianBrand = t("Request for an offer", { lng: "ru" });
+    // const russianBrand = t("Request for an offer", { lng: "ru" });
 
     // Формируем сообщение, включающее выбранные товары
 
