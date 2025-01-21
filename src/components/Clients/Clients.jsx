@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function Clients() {
   const tg = window.Telegram.WebApp;
   tg.disableVerticalSwipes();
-  const tgUserId = tg.initDataUnsafe.user.id;
+  // const tgUserId = tg.initDataUnsafe.user.id;
   const [userData, setUserData] = useState({
     name: "",
     phone: "",
