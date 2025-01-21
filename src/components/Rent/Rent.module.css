@@ -336,6 +336,8 @@
   width: 87%;
   height: 29px;
   margin-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .tgWindow {
   display: flex;
