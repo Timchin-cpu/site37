@@ -73,7 +73,7 @@ const Requestoffer = () => {
     );
 
     // Отправка данных на сервер
-    fetch("/api/submit1", {
+    fetch("/api/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
