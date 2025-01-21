@@ -334,7 +334,7 @@ function Branding() {
             type="file"
             onChange={handleFileUpload}
             style={{ display: "none" }}
-            accept="image/*"
+            // accept="image/*"
           />
         </div>
         <div className={styles.checkbox}>
