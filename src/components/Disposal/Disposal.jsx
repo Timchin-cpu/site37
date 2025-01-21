@@ -334,7 +334,7 @@ function Disposal() {
             window.open("https://bansys.ru/services/utilizatsiya/")
           }
         >
-          {t("Regarding Services")}
+          {t("REGARDING SERVICES")}
         </button>
         <p className={styles.textInfo}>
           {t("The invitation link to our TELEGRAM bot")}
