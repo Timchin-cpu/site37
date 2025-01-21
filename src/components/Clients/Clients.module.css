@@ -38,11 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  position: sticky; /* Добавляем фиксированное позиционирование */
-  top: 0; /* Прикрепляем к верху */
-  background: #17453b; /* Добавляем фон, чтобы контент не просвечивал */
-  z-index: 100;
+  width: 100%;
 }
 /* .questionSupport {
 } */
