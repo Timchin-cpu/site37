@@ -95,7 +95,7 @@ function Clients() {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
-        <div className={style.logosDivs}>
+        <div className={styles.logosDivs}>
           {" "}
           <div className={styles.logos}>
             <img className={styles.logo} src="/BANSYS.png" alt="" />
