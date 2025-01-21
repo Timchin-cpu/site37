@@ -62,13 +62,15 @@
   padding-top: 29px;
 }
 .role button {
-  font-family: Raleway;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.05000000074505806px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  font-family: Raleway;
+  line-height: 18px;
+  text-underline-position: from-font;
   background: linear-gradient(180deg, #c7b385 0%, #e0d0ab 100%);
   border: none;
   border-radius: 5px;
