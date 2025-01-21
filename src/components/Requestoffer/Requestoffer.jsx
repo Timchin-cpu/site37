@@ -62,6 +62,15 @@ const Requestoffer = () => {
       .join("\n");
 
     const fullMessage = `${message}\n\nВыбранные товары:\n${selectedItemsMessage}`;
+    console.log(
+      userData,
+      tgUserId,
+      fullMessage,
+      russianBrand,
+      selectedFile,
+
+      selectedItems
+    );
 
     // Отправка данных на сервер
     fetch("/api/submit1", {
@@ -85,7 +94,6 @@ const Requestoffer = () => {
         navigate("/");
       })
       .catch((error) => {
-        console.log(data);
         console.error("Ошибка при отправке:", error);
         alert("Произошла ошибка при отправке");
       });
