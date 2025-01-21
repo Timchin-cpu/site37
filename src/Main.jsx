@@ -47,13 +47,15 @@ function Main() {
           <p>{t("Delivery and rigging in Russia and abroad")}</p>
         </div>
         <div className={styles.content}>
-          <div className={styles.circleNav}>
+          <img className={styles.circleNavImg} src="/Group 9189.png" alt="" />
+
+          {/* <div className={styles.circleNav}>
             <img
               className={styles.garantCircleNav}
               src="/Group 9188.png"
               alt=""
             />
-          </div>
+          </div> */}
 
           <p>{t("Warranty and pre-sales preparation")}</p>
         </div>

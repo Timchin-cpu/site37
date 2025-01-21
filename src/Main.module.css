@@ -63,6 +63,7 @@
 }
 .content p {
   width: 63% !important;
+  padding-left: 18px;
 }
 .role button {
   font-size: 15px;
