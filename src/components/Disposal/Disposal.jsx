@@ -199,6 +199,20 @@ function Disposal() {
           />
         </div>
       </div>
+      <div className={styles.supportImgs}>
+        <img
+          src="/wp.png"
+          alt=""
+          onClick={() => window.open("https://wa.me/79295022998")}
+        />
+        <img
+          src="/tg.png"
+          alt=""
+          onClick={() => window.open("https://t.me/Bansys_chat")}
+        />
+
+        <img src="mail.png" alt="" onClick={handleMailClick} />
+      </div>
       <div className={styles.mainContent}>
         <div className={styles.main}>
           <div>
@@ -216,20 +230,6 @@ function Disposal() {
                 )}
               </p>
             </div>
-          </div>
-          <div className={styles.supportImgs}>
-            <img
-              src="/wp.png"
-              alt=""
-              onClick={() => window.open("https://wa.me/79295022998")}
-            />
-            <img
-              src="/tg.png"
-              alt=""
-              onClick={() => window.open("https://t.me/Bansys_chat")}
-            />
-
-            <img src="mail.png" alt="" onClick={handleMailClick} />
           </div>
         </div>
       </div>
