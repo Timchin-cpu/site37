@@ -23,6 +23,37 @@ function Clients() {
     navigate("/Rent");
   };
   const handleSend = () => {
+    // Получаем русскую версию текста
+    const russianBrand = t("Request for an offer", { lng: "ru" });
+
+    // Формируем сообщение, включающее выбранные товары
+
+    // Отправка данных на сервер
+    fetch("/api/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...userData,
+        userId: tgUserId,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        alert("Данные успешно отправлены");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error("Ошибка при отправке:", error);
+        alert("Произошла ошибка при отправке");
+      });
+  };
+  const handleInputChange = (field, value) => {
+    setUserData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
     setIsModalOpen(false);
   };
   const handleEquipmentspareClick = () => {
