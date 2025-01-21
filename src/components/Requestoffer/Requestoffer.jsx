@@ -85,6 +85,7 @@ const Requestoffer = () => {
         navigate("/");
       })
       .catch((error) => {
+        console.log(data);
         console.error("Ошибка при отправке:", error);
         alert("Произошла ошибка при отправке");
       });
