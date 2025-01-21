@@ -349,7 +349,7 @@ function Equipmentspare() {
         </div>
         <div className={styles.send}>
           {i18n.language !== "en" && (
-            <button onClick={handleSubmit}>отправить</button>
+            <button onClick={handleSubmit}>ОТПРАВИТЬ</button>
           )}
         </div>
         <p className={styles.textInfo}>
@@ -361,7 +361,7 @@ function Equipmentspare() {
           className={styles.abouService}
           onClick={() => window.open("https://bansys.ru/product/")}
         >
-          {t("Regarding Services")}
+          {t("REGARDING SERVICES")}
         </button>
         <p className={styles.textInfo}>
           {t("The invitation link to our TELEGRAM bot")}

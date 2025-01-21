@@ -320,7 +320,7 @@ function Disposal() {
         </div>
         <div className={styles.send}>
           {i18n.language !== "en" && (
-            <button onClick={handleSubmit}>отправить</button>
+            <button onClick={handleSubmit}>ОТПРАВИТЬ</button>
           )}
         </div>
         <p className={styles.textInfo}>

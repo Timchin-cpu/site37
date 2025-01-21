@@ -179,7 +179,7 @@ function Clients() {
               )}
             </p>
             <button onClick={() => window.open("https://t.me/Bansys_sale")}>
-              {t("Go to channel")}
+              {t("GO TO CHANNEL")}
             </button>
           </div>
         </div>
@@ -232,7 +232,7 @@ function Clients() {
               value={userData.email}
               onChange={(e) => handleInputChange("email", e.target.value)}
             />
-            <button onClick={handleSend}>Отправить</button>
+            <button onClick={handleSend}>ОТПРАВИТЬ</button>
           </div>
         </div>
       )}

@@ -233,7 +233,7 @@ const RequestDisposal = () => {
             <p> {t("Agree to process personal data")}</p>
           </div>
           <div className={styles.send}>
-            <button onClick={handleSubmit}>{t("send")}</button>
+            <button onClick={handleSubmit}>{t("SEND")}</button>
           </div>
         </div>
       </div>

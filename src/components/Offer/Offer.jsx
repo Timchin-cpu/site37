@@ -170,7 +170,7 @@ const Offer = () => {
             )
           }
         >
-          {t("propose")}
+          {t("PROPOSE")}
         </button>
       )}
     </div>

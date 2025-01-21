@@ -343,7 +343,7 @@ function Branding() {
         </div>
         <div className={styles.send}>
           {i18n.language !== "en" && (
-            <button onClick={handleSubmit}>отправить</button>
+            <button onClick={handleSubmit}>ОТПРАВИТЬ</button>
           )}
         </div>
         <p className={styles.textInfo}>
@@ -357,7 +357,7 @@ function Branding() {
             window.open("https://bansys.ru/services/brendirovanie/")
           }
         >
-          {t("Regarding Services")}
+          {t("REGARDING SERVICES")}
         </button>
         <p className={styles.textInfo}>
           {t("The invitation link to our TELEGRAM bot")}

@@ -68,7 +68,7 @@ function Provider() {
           </div>
           <div className={styles.buttonConatiner}>
             <button onClick={handleRequestredemptionClick}>
-              {t("propose")}
+              {t("PROPOSE")}
             </button>
           </div>
         </div>
@@ -109,7 +109,7 @@ function Provider() {
                 "All new Bansys stocks and themed market news from one channel"
               )}
             </p>
-            <button>{t("Go to channel")}</button>
+            <button>{t("GO TO CHANNEL")}</button>
           </div>
         </div>
 

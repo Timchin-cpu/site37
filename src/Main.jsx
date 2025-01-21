@@ -35,8 +35,8 @@ function Main() {
           <img className={styles.imgW} src="/BANSYS.png" alt="" />
         </div>
         <div className={styles.role}>
-          <button onClick={handleProviderClick}>{t("supplier")}</button>
-          <button onClick={handleClientClick}>{t("customer")}</button>
+          <button onClick={handleProviderClick}>{t("SUPPLIER")}</button>
+          <button onClick={handleClientClick}>{t("CUSTOMER")}</button>
         </div>
         <div className={styles.content}>
           <img className={styles.circleNavImg} src="/Group 9194.png" alt="" />

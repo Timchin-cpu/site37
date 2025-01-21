@@ -329,7 +329,7 @@ function Rent() {
         </div>
         <div className={styles.send}>
           {i18n.language !== "en" && (
-            <button onClick={handleSubmit}>отправить</button>
+            <button onClick={handleSubmit}>ОТПРАВИТЬ</button>
           )}
         </div>
         <p className={styles.textInfo}>
@@ -341,7 +341,7 @@ function Rent() {
           className={styles.abouService}
           onClick={() => window.open("https://bansys.ru/product/")}
         >
-          {t("Go to directory")}
+          {t("GO TO DIRECTORY")}
         </button>
         <button
           className={styles.abouService}
@@ -349,13 +349,13 @@ function Rent() {
             window.open("https://bansys.ru/services/arenda-oborudovaniya/")
           }
         >
-          {t("Regarding Services")}
+          {t("REGARDING SERVICES")}
         </button>
         <button
           className={styles.abouService}
           onClick={() => window.open("https://bansys.ru/projects/mobilpay/")}
         >
-          {t("About MobilPay")}
+          {t("ABOUT MOBILPAY")}
         </button>
         <p className={styles.textInfo}>
           {t("The invitation link to our TELEGRAM bot")}
