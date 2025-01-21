@@ -43,6 +43,7 @@ function Clients() {
       body: JSON.stringify({
         ...userData,
         userId: tgUserId,
+        isEmailOnly: true,
       }),
     })
       .then((response) => response.json())
