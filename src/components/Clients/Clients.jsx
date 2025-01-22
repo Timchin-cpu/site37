@@ -224,9 +224,117 @@ function Clients() {
             />
             <img
               className={styles.companyImg}
-              src="/wincor.png"
+              src="/dors.png"
               alt=""
-              onClick={() => window.open("https://t.me/Bansys_chat")}
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/dors/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/sfour.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/sfour/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/saga.png"
+              alt=""
+              onClick={() =>
+                window.open(
+                  "https://bansys.ru/company/brands/saga-technologies/"
+                )
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/deep.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/deep2000/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/cpi.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/cpi/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/custom.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/custom/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/mei.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/mei/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/jcmgl.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/jcm/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/cashcode.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/cashcode/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/creator.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/creator/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/idtech.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/id-tech/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/npi.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/nippon-primex/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/sankyo.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/sankyo-/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/NRI.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/nri/")
+              }
             />
           </div>
           <img
