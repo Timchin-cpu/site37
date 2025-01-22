@@ -125,7 +125,7 @@ function Provider() {
             {t(
               "For detailed information about the company's services and products, please visit the Bans'.ru website"
             )}
-            <span>{t("bansys.ru")}</span>
+            <span>{t(" bansys.ru")}</span>
           </p>
         </div>
       </div>
