@@ -12,7 +12,6 @@ function Clients() {
     phone: "",
     email: "",
   });
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = (direction) => {
     const carousel = document.querySelector(`.${styles.carouselImgs}`);
