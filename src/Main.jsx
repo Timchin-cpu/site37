@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import styles from "./Main.module.css"; // Убедитесь, что стили подключены
 
 function Main() {
+  const tg = window.Telegram.WebApp;
+  tg.disableVerticalSwipes();
   const { t, i18n } = useTranslation();
 
   const changeLanguage = () => {
