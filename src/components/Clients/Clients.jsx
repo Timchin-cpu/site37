@@ -12,6 +12,24 @@ function Clients() {
     phone: "",
     email: "",
   });
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = (direction) => {
+    const carousel = document.querySelector(`.${styles.carouselImgs}`);
+    const scrollAmount = 100; // Количество пикселей для скролла
+
+    if (direction === "left") {
+      carousel.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth",
+      });
+    } else {
+      carousel.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
   const navigate = useNavigate();
   const handleBackClick = () => {
     navigate(-1); // -1 означает переход на одну страницу назад
@@ -156,7 +174,12 @@ function Clients() {
         </div>
         <h2 className={styles.brandNames}>{t("SUPPLIED BRANDS")}</h2>
         <div className={styles.carousel}>
-          <img className={styles.arrowImgar} src="/arrow.png" alt="" />
+          <img
+            className={styles.arrowImgar}
+            src="/arrow.png"
+            alt=""
+            onClick={() => handleScroll("left")}
+          />
           <div className={styles.carouselImgs}>
             <img
               className={styles.companyImg}
@@ -211,7 +234,7 @@ function Clients() {
             className={styles.arrowImgfor}
             src="/forwarf.png"
             alt=""
-            onClick={() => window.open("https://bansys.ru/company/brands/")}
+            onClick={() => handleScroll("right")}
           />
         </div>
         <div className={styles.subscription}>
