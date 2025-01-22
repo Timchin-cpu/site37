@@ -156,7 +156,7 @@ function Clients() {
         </div>
         <h2 className={styles.brandNames}>{t("SUPPLIED BRANDS")}</h2>
         <div className={styles.carousel}>
-          {/* <img className={styles.arrowImgar} src="/arrow.png" alt="" /> */}
+          <img className={styles.arrowImgar} src="/arrow.png" alt="" />
           <div className={styles.carouselImgs}>
             <img
               className={styles.companyImg}
