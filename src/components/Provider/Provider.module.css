@@ -47,13 +47,13 @@
   background-color: white;
   font-family: Raleway;
   font-size: 10.46px;
-  font-weight: 100;
+  /* font-weight: 100; */
   line-height: 15.68px;
   letter-spacing: -0.04356435313820839px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #aaaaaa;
+  color: black;
   height: 43px;
   margin-bottom: 16px;
 }
@@ -173,7 +173,7 @@
 .textConten p {
   font-family: Raleway;
   font-size: 9px;
-  font-weight: 100;
+  /* font-weight: 100; */
   line-height: 17px;
   letter-spacing: -0.05686274170875549px;
   text-align: left;
