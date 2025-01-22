@@ -60,7 +60,7 @@ function Clients() {
       ...prev,
       [field]: value,
     }));
-    setIsModalOpen(false);
+    // setIsModalOpen(false);
   };
   const handleEquipmentspareClick = () => {
     navigate("/Equipmentspare");
