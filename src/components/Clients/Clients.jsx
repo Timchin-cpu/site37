@@ -158,12 +158,54 @@ function Clients() {
         <div className={styles.carousel}>
           {/* <img className={styles.arrowImgar} src="/arrow.png" alt="" /> */}
           <div className={styles.carouselImgs}>
-            <img className={styles.companyImg} src="/dn.png" alt="" />
-            <img className={styles.companyImg} src="/ncr.png" alt="" />
-            <img className={styles.companyImg} src="/hyousung.png" alt="" />
-            <img className={styles.companyImg} src="/oki.png" alt="" />
-            <img className={styles.companyImg} src="/grg.png" alt="" />
-            <img className={styles.companyImg} src="/wincor.png" alt="" />
+            <img
+              className={styles.companyImg}
+              src="/dn.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/diebold-nixdorf/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/ncr.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/ncr/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/hyousung.png"
+              alt=""
+              onClick={() =>
+                window.open(
+                  "https://bansys.ru/company/brands/nautilus-hyosung/"
+                )
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/oki.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/oki/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/grg.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/oki/")
+              }
+            />
+            <img
+              className={styles.companyImg}
+              src="/wincor.png"
+              alt=""
+              onClick={() => window.open("https://t.me/Bansys_chat")}
+            />
           </div>
           <img
             className={styles.arrowImgfor}
