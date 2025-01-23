@@ -311,7 +311,7 @@
   justify-content: end;
 }
 .tgWin {
-  display: flex;
+  /* display: flex; */
   align-items: flex-end; /* Выравнивание по нижнему краю */
   gap: 5px; /* Отступ между текстом и картинкой */
   justify-content: center;
