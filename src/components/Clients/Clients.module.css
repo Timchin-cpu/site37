@@ -334,9 +334,10 @@
 .qwerty {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 30%;
+  justify-content: center;
+  width: 100%;
 }
 .qwerty p {
   margin: 0;
+  padding-right: 10px;
 }
