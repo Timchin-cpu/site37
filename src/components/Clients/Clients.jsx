@@ -336,6 +336,14 @@ function Clients() {
                 window.open("https://bansys.ru/company/brands/nri/")
               }
             />
+            <img
+              className={styles.companyImg}
+              src="/mw.png"
+              alt=""
+              onClick={() =>
+                window.open("https://bansys.ru/company/brands/mean-well/")
+              }
+            />
           </div>
           <img
             className={styles.arrowImgfor}
