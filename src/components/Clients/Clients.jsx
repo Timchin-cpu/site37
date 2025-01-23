@@ -377,10 +377,11 @@ function Clients() {
           <div className={styles.tgWin}>
             <p onClick={handleCopyLink} style={{ cursor: "pointer" }}>
               {t("Link invited to our Telegram bot")}
-              <br />
-              https://t.me/bansysbot
             </p>
-            <img src="/windows.png" alt="" />
+            <div className={styles.qwerty}>
+              <p>https://t.me/bansysbot</p>
+              <img src="/windows.png" alt="" />
+            </div>
           </div>
           <p>
             {t(
