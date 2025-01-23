@@ -320,7 +320,7 @@
 .tgWin img {
   width: 10px;
   height: auto;
-  margin-bottom: 8px; /* Небольшой отступ снизу для выравнивания */
+  /* margin-bottom: 8px; Небольшой отступ снизу для выравнивания */
 }
 .logosDivs {
   background: #17453b;
