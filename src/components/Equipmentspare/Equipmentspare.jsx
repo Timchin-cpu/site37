@@ -321,7 +321,7 @@ function Equipmentspare() {
             <h2>{t("signal communication")}</h2>
             <p>
               {t(
-                "In order to better form our company's commercial quotation, please indicate the model name and quantity Geographic location."
+                "If you know the model name and/or the batch number of the required equipment, be sure to include them in the message."
               )}
             </p>
           </div>
