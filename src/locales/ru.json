@@ -94,5 +94,7 @@
   "state": "состояние",
   "quantity": "кол-во",
   "Request for an offer": "Заявка на предложение",
-  "Subscribe to the newsletter. News, popular stocks, sales, inventory clearance.": "Подписаться на рассылку. Новости, актуальные акции, распродажи, ликвидация складских остатков."
+  "Subscribe to the newsletter. News, popular stocks, sales, inventory clearance.": "Подписаться на рассылку. Новости, актуальные акции, распродажи, ликвидация складских остатков.",
+  "If you know the model name and/or the batch number of the required equipment, be sure to include them in the message.": "Если вы знаете название модели и/или партийный номер необходимого оборудования, обязательно укажите их  в сообщении."
+
 }
