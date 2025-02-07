@@ -74,7 +74,7 @@ function Provider() {
         </div>
         <div className={styles.mainContent}>
           <p>{t("View Bansys' current purchase projects")}</p>
-          <p>перейти к списку</p>
+          <p>{t("go to the list")}</p>
           <img
             src="/forwardwh.png"
             alt=""
