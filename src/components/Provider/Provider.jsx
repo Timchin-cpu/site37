@@ -74,6 +74,7 @@ function Provider() {
         </div>
         <div className={styles.mainContent}>
           <p>{t("View Bansys' current purchase projects")}</p>
+          <p>перейти к списку</p>
           <img
             src="/forwardwh.png"
             alt=""
@@ -118,7 +119,7 @@ function Provider() {
             <p>
               {t("Link invited to our Telegram bot")}
               <br />
-              https://t.me/bansysbot
+              https://
             </p>
           </div>
           <p>
