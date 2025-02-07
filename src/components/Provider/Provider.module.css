@@ -226,11 +226,11 @@
   width: 100%;
 }
 .mainContent {
-  background: #baa36e;
+  background: #C01818;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100vw;
+  width: 100vw;    box-shadow: 0px -6px 0px 0px #00000025 inset, 0px 6px 0px 0px #00000025 inset;
 }
 .mainContent p {
   font-family: Raleway;
