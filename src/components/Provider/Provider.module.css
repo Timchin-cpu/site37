@@ -168,6 +168,7 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  margin-bottom: 10px !important;
   margin: 0;
 }
 .textConten p {
