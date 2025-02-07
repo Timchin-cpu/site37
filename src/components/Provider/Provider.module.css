@@ -242,8 +242,9 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: white;
-  width: 30vw;
+  width: 32vw;
 }
+
 .mainContent img {
   width: 25px;
 }
