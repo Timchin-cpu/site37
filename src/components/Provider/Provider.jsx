@@ -119,7 +119,7 @@ function Provider() {
             <p>
               {t("Link invited to our Telegram bot")}
               <br />
-              https://
+              https://t.me/bansysbot
             </p>
           </div>
           <p>
